@@ -8,10 +8,10 @@ using namespace std;
 class Pattern{
 
   public:
-    Pattern(int length=64);
+    Pattern(unsigned int length=64);
 
-    int length() const;
-    int length(const int new_length);
+    unsigned int length() const;
+    unsigned int length(const unsigned int new_length);
 
     int vector_length() const;
 
@@ -35,7 +35,7 @@ class Pattern{
     reverse_iterator<__wrap_iter<const Note*> > crend(){ return notes_.crend();};
 
   private:
-    int length_;
+    unsigned int length_;
 
     vector<Note> notes_;
 };

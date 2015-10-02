@@ -4,16 +4,16 @@
 
 using namespace std;
 
-Pattern::Pattern(int length){
+Pattern::Pattern(unsigned int length){
   notes_.resize(length);
   this->length(length);
 }
 
-int Pattern::length() const{
+unsigned int Pattern::length() const{
   return length_;
 }
 
-int Pattern::length(int new_length){
+unsigned int Pattern::length(unsigned int new_length){
   if(new_length > 0){
     // resize vectors only if new length is greater
     // (we don't want to destructively resize in case

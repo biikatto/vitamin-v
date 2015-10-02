@@ -104,14 +104,14 @@ TEST(PatternClearTest, ClearMethod){
   // Test the clear() method.
   Pattern pattern;
 
-  for(int i=0;i<pattern.length();i++){
+  for(unsigned int i=0;i<pattern.length();i++){
     pattern[i] = Note("3a");
     EXPECT_EQ("3a", pattern[i].pitch().to_string());
   }
 
   pattern.clear();
 
-  for(int i=0;i<pattern.length();i++){
+  for(unsigned int i=0;i<pattern.length();i++){
     EXPECT_EQ("00", pattern[i].pitch().to_string());
   }
 }
