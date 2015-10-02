@@ -1,0 +1,6 @@
+-remove lpb from pattern; this should be a global parameter and be adjustable via pattern fx cmd
+-on that note, how would per-pattern bpm even work? maybe I can add this later, but it should be removed for now
+
+-think about timing; audio interface sample clock? rtaudio
+
+-Goal: MIDI!!! rtmidi, w rtaudio timing
