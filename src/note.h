@@ -58,10 +58,6 @@ class Note{
         int editor_fx_cmd();  // change this to EditorFXCmd later
         int editor_fx_cmd(int new_cmd);
 
-        string pitch_str(bool upper=true);
-        string velocity_str(bool upper=true);
-        string pan_str(bool upper=true);
-        string delay_str(bool upper=true);
         string editor_fx_cmd_str(bool upper=true);
 
     private:

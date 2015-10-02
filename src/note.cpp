@@ -118,28 +118,6 @@ int Note::editor_fx_cmd(int new_editor_fx_cmd){
 }
 
 
-string Note::pan_str(bool upper){
-  char result[2];
-  if(upper){
-    sprintf(result, "%X", _pan);
-  }else{
-    sprintf(result, "%x", _pan);
-  }
-
-  return result;
-}
-
-string Note::delay_str(bool upper){
-  char result[2];
-  if(upper){
-    sprintf(result, "%X", _delay);
-  }else{
-    sprintf(result, "%x", _delay);
-  }
-
-  return result;
-}
-
 string Note::editor_fx_cmd_str(bool upper){
   // this will change later, when editor fx cmds are implemented.
   char result[2];
