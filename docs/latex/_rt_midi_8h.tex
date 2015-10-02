@@ -1,0 +1,65 @@
+\hypertarget{_rt_midi_8h}{}\section{include/rtmidi/\+Rt\+Midi.h File Reference}
+\label{_rt_midi_8h}\index{include/rtmidi/\+Rt\+Midi.\+h@{include/rtmidi/\+Rt\+Midi.\+h}}
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_rt_midi_error}{Rt\+Midi\+Error}
+\begin{DoxyCompactList}\small\item\em Exception handling class for \hyperlink{class_rt_midi}{Rt\+Midi}. \end{DoxyCompactList}\item 
+class \hyperlink{class_rt_midi}{Rt\+Midi}
+\begin{DoxyCompactList}\small\item\em An abstract base class for realtime M\+I\+DI input/output. \end{DoxyCompactList}\item 
+class \hyperlink{class_rt_midi_in}{Rt\+Midi\+In}
+\begin{DoxyCompactList}\small\item\em A realtime M\+I\+DI input class. \end{DoxyCompactList}\item 
+class \hyperlink{class_rt_midi_out}{Rt\+Midi\+Out}
+\begin{DoxyCompactList}\small\item\em A realtime M\+I\+DI output class. \end{DoxyCompactList}\item 
+class \hyperlink{class_midi_api}{Midi\+Api}
+\item 
+class \hyperlink{class_midi_in_api}{Midi\+In\+Api}
+\item 
+struct \hyperlink{struct_midi_in_api_1_1_midi_message}{Midi\+In\+Api\+::\+Midi\+Message}
+\item 
+struct \hyperlink{struct_midi_in_api_1_1_midi_queue}{Midi\+In\+Api\+::\+Midi\+Queue}
+\item 
+struct \hyperlink{struct_midi_in_api_1_1_rt_midi_in_data}{Midi\+In\+Api\+::\+Rt\+Midi\+In\+Data}
+\item 
+class \hyperlink{class_midi_out_api}{Midi\+Out\+Api}
+\item 
+class \hyperlink{class_midi_in_dummy}{Midi\+In\+Dummy}
+\item 
+class \hyperlink{class_midi_out_dummy}{Midi\+Out\+Dummy}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries R\+T\+M\+I\+D\+I\+\_\+\+V\+E\+R\+S\+I\+ON}~\char`\"{}2.\+1.\+0\char`\"{}\hypertarget{_rt_midi_8h_a4164b6645e3a07cd574833d2a1d1fee4}{}\label{_rt_midi_8h_a4164b6645e3a07cd574833d2a1d1fee4}
+
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+R\+T\+M\+I\+D\+I\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+\_\+}\hypertarget{_rt_midi_8h_a2e3b55f638d7488a0f28d51b451ff4c1}{}\label{_rt_midi_8h_a2e3b55f638d7488a0f28d51b451ff4c1}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{_rt_midi_8h_a57641d3490f722c3efb9ee1c640e36bb}{Rt\+Midi\+Error\+Callback}) (\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905ee}{Rt\+Midi\+Error\+::\+Type} type, const std\+::string \&error\+Text, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_rt_midi}{Rt\+Midi} error callback function prototype. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{Rt\+Midi.\+h@{Rt\+Midi.\+h}!Rt\+Midi\+Error\+Callback@{Rt\+Midi\+Error\+Callback}}
+\index{Rt\+Midi\+Error\+Callback@{Rt\+Midi\+Error\+Callback}!Rt\+Midi.\+h@{Rt\+Midi.\+h}}
+\subsubsection[{Rt\+Midi\+Error\+Callback}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Rt\+Midi\+Error\+Callback) ({\bf Rt\+Midi\+Error\+::\+Type} type, const std\+::string \&error\+Text, void $\ast$user\+Data)}\hypertarget{_rt_midi_8h_a57641d3490f722c3efb9ee1c640e36bb}{}\label{_rt_midi_8h_a57641d3490f722c3efb9ee1c640e36bb}
+
+
+\hyperlink{class_rt_midi}{Rt\+Midi} error callback function prototype. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of error. \\
+\hline
+{\em error\+Text} & Error description.\\
+\hline
+\end{DoxyParams}
+\hyperlink{class_note}{Note} that class behaviour is undefined after a critical error (not a warning) is reported. 

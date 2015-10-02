@@ -1,0 +1,73 @@
+A programmer may wish to query the available audio device capabilities before deciding which to use. The following example outlines how this can be done.
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// audioprobe.cpp}
+
+\textcolor{preprocessor}{#include <iostream>}
+\textcolor{preprocessor}{#include "\hyperlink{_rt_audio_8h}{RtAudio.h}"}
+
+\textcolor{keywordtype}{int} main()
+\{
+  \hyperlink{class_rt_audio}{RtAudio} audio;
+
+  \textcolor{comment}{// Determine the number of devices available}
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} devices = audio.\hyperlink{class_rt_audio_a747ce2d73803641bbb66d6e78092aa1a}{getDeviceCount}();
+
+  \textcolor{comment}{// Scan through devices for various capabilities}
+  \hyperlink{struct_rt_audio_1_1_device_info}{RtAudio::DeviceInfo} info;
+  \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0; i<devices; i++ ) \{
+
+    info = audio.\hyperlink{class_rt_audio_a02d7ff44ad1d7eae22283a052f3dfda8}{getDeviceInfo}( i );
+
+    \textcolor{keywordflow}{if} ( info.\hyperlink{struct_rt_audio_1_1_device_info_a97573717ccb1e75a834a0a108cd6982d}{probed} == \textcolor{keyword}{true} ) \{
+      \textcolor{comment}{// Print, for example, the maximum number of output channels for each device}
+      std::cout << \textcolor{stringliteral}{"device = "} << i;
+      std::cout << \textcolor{stringliteral}{": maximum output channels = "} << info.\hyperlink{struct_rt_audio_1_1_device_info_a81aaf488f8158ef55b1bb678f66feb7d}{outputChannels} << \textcolor{stringliteral}{"\(\backslash\)n"};
+    \}
+  \}
+
+  \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+
+
+The \hyperlink{struct_rt_audio_1_1_device_info}{Rt\+Audio\+::\+Device\+Info} structure is defined in \hyperlink{_rt_audio_8h}{Rt\+Audio.\+h} and provides a variety of information useful in assessing the capabilities of a device\+:
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{struct_rt_audio_1_1_device_info}{RtAudio::DeviceInfo} \{
+  \textcolor{keywordtype}{bool} \hyperlink{struct_rt_audio_1_1_device_info_a97573717ccb1e75a834a0a108cd6982d}{probed};                           \textcolor{comment}{// true if the device capabilities were successfully probed.}
+  std::string \hyperlink{struct_rt_audio_1_1_device_info_a24df596ab8d54f2eb540c7cf16212b3b}{name};                      \textcolor{comment}{// Character string device identifier.}
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \hyperlink{struct_rt_audio_1_1_device_info_a81aaf488f8158ef55b1bb678f66feb7d}{outputChannels};           \textcolor{comment}{// Maximum output channels supported by device.}
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \hyperlink{struct_rt_audio_1_1_device_info_a56247b458a937ae84d98ca9c4b243275}{inputChannels};            \textcolor{comment}{// Maximum input channels supported by device.}
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \hyperlink{struct_rt_audio_1_1_device_info_a3e8ad34c2d14e24293a0beafc26186e7}{duplexChannels};           \textcolor{comment}{// Maximum simultaneous input/output channels
+       supported by device.}
+  \textcolor{keywordtype}{bool} \hyperlink{struct_rt_audio_1_1_device_info_a5365245e73ffe29a05734de4474acd58}{isDefaultOutput};                  \textcolor{comment}{// true if this is the default output device.}
+  \textcolor{keywordtype}{bool} \hyperlink{struct_rt_audio_1_1_device_info_a7c8aca084bd908799b6be5954b80def2}{isDefaultInput};                   \textcolor{comment}{// true if this is the default input device.}
+  std::vector<unsigned int> \hyperlink{struct_rt_audio_1_1_device_info_afa65f5f92f66ce7aacd3ff35e11b230f}{sampleRates}; \textcolor{comment}{// Supported sample rates.}
+  RtAudioFormat \hyperlink{struct_rt_audio_1_1_device_info_a23251b549b89b2fe04a57fcd7cb76ea4}{nativeFormats};           \textcolor{comment}{// Bit mask of supported data formats.}
+\};
+\end{DoxyCode}
+
+
+The following data formats are defined and fully supported by \hyperlink{class_rt_audio}{Rt\+Audio}\+:
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \hyperlink{_rt_audio_8h_aafca92882d25915560018873221e44b8}{RtAudioFormat};
+\textcolor{keyword}{static} \textcolor{keyword}{const} RtAudioFormat  RTAUDIO\_SINT8;   \textcolor{comment}{// Signed 8-bit integer}
+\textcolor{keyword}{static} \textcolor{keyword}{const} RtAudioFormat  RTAUDIO\_SINT16;  \textcolor{comment}{// Signed 16-bit integer}
+\textcolor{keyword}{static} \textcolor{keyword}{const} RtAudioFormat  RTAUDIO\_SINT24;  \textcolor{comment}{// Signed 24-bit integer (lower 3 bytes of 32-bit signed
+       integer.)}
+\textcolor{keyword}{static} \textcolor{keyword}{const} RtAudioFormat  RTAUDIO\_SINT32;  \textcolor{comment}{// Signed 32-bit integer}
+\textcolor{keyword}{static} \textcolor{keyword}{const} RtAudioFormat  RTAUDIO\_FLOAT32; \textcolor{comment}{// 32-bit float normalized between +/- 1.0}
+\textcolor{keyword}{static} \textcolor{keyword}{const} RtAudioFormat  RTAUDIO\_FLOAT64; \textcolor{comment}{// 64-bit double normalized between +/- 1.0}
+\end{DoxyCode}
+
+
+The {\ttfamily native\+Formats} member of the \hyperlink{struct_rt_audio_1_1_device_info}{Rt\+Audio\+::\+Device\+Info} structure is a bit mask of the above formats which are natively supported by the device. However, \hyperlink{class_rt_audio}{Rt\+Audio} will automatically provide format conversion if a particular format is not natively supported. When the {\ttfamily probed} member of the \hyperlink{struct_rt_audio_1_1_device_info}{Rt\+Audio\+::\+Device\+Info} structure is false, the remaining structure members are undefined and the device is probably unusable.
+
+Some audio devices may require a minimum channel value greater than one. \hyperlink{class_rt_audio}{Rt\+Audio} will provide automatic channel number compensation when the number of channels set by the user is less than that required by the device. Channel compensation is {\itshape N\+OT} possible when the number of channels set by the user is greater than that supported by the device.
+
+It should be noted that the capabilities reported by a device driver or underlying audio A\+PI are not always accurate and/or may be dependent on a combination of device settings. For this reason, \hyperlink{class_rt_audio}{Rt\+Audio} does not rely on the queried values when attempting to open a stream. 

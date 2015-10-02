@@ -1,0 +1,75 @@
+\hypertarget{struct_rt_audio_1_1_device_info}{}\section{Rt\+Audio\+:\+:Device\+Info Struct Reference}
+\label{struct_rt_audio_1_1_device_info}\index{Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}}
+
+
+The public device information structure for returning queried values.  
+
+
+
+
+{\ttfamily \#include $<$Rt\+Audio.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{struct_rt_audio_1_1_device_info_a97573717ccb1e75a834a0a108cd6982d}{probed}
+\item 
+std\+::string \hyperlink{struct_rt_audio_1_1_device_info_a24df596ab8d54f2eb540c7cf16212b3b}{name}
+\item 
+unsigned int \hyperlink{struct_rt_audio_1_1_device_info_a81aaf488f8158ef55b1bb678f66feb7d}{output\+Channels}
+\item 
+unsigned int \hyperlink{struct_rt_audio_1_1_device_info_a56247b458a937ae84d98ca9c4b243275}{input\+Channels}
+\item 
+unsigned int \hyperlink{struct_rt_audio_1_1_device_info_a3e8ad34c2d14e24293a0beafc26186e7}{duplex\+Channels}
+\item 
+bool \hyperlink{struct_rt_audio_1_1_device_info_a5365245e73ffe29a05734de4474acd58}{is\+Default\+Output}
+\item 
+bool \hyperlink{struct_rt_audio_1_1_device_info_a7c8aca084bd908799b6be5954b80def2}{is\+Default\+Input}
+\item 
+std\+::vector$<$ unsigned int $>$ \hyperlink{struct_rt_audio_1_1_device_info_afa65f5f92f66ce7aacd3ff35e11b230f}{sample\+Rates}
+\item 
+unsigned int \hyperlink{struct_rt_audio_1_1_device_info_ae9f35de296b33ae1f4e7baab8fd3be6e}{preferred\+Sample\+Rate}
+\item 
+\hyperlink{_rt_audio_8h_aafca92882d25915560018873221e44b8}{Rt\+Audio\+Format} \hyperlink{struct_rt_audio_1_1_device_info_a23251b549b89b2fe04a57fcd7cb76ea4}{native\+Formats}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The public device information structure for returning queried values. 
+
+\subsection{Member Data Documentation}
+\index{Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}!duplex\+Channels@{duplex\+Channels}}
+\index{duplex\+Channels@{duplex\+Channels}!Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}}
+\subsubsection[{duplex\+Channels}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Rt\+Audio\+::\+Device\+Info\+::duplex\+Channels}\hypertarget{struct_rt_audio_1_1_device_info_a3e8ad34c2d14e24293a0beafc26186e7}{}\label{struct_rt_audio_1_1_device_info_a3e8ad34c2d14e24293a0beafc26186e7}
+Maximum simultaneous input/output channels supported by device. \index{Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}!input\+Channels@{input\+Channels}}
+\index{input\+Channels@{input\+Channels}!Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}}
+\subsubsection[{input\+Channels}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Rt\+Audio\+::\+Device\+Info\+::input\+Channels}\hypertarget{struct_rt_audio_1_1_device_info_a56247b458a937ae84d98ca9c4b243275}{}\label{struct_rt_audio_1_1_device_info_a56247b458a937ae84d98ca9c4b243275}
+Maximum input channels supported by device. \index{Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}!is\+Default\+Input@{is\+Default\+Input}}
+\index{is\+Default\+Input@{is\+Default\+Input}!Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}}
+\subsubsection[{is\+Default\+Input}]{\setlength{\rightskip}{0pt plus 5cm}bool Rt\+Audio\+::\+Device\+Info\+::is\+Default\+Input}\hypertarget{struct_rt_audio_1_1_device_info_a7c8aca084bd908799b6be5954b80def2}{}\label{struct_rt_audio_1_1_device_info_a7c8aca084bd908799b6be5954b80def2}
+true if this is the default input device. \index{Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}!is\+Default\+Output@{is\+Default\+Output}}
+\index{is\+Default\+Output@{is\+Default\+Output}!Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}}
+\subsubsection[{is\+Default\+Output}]{\setlength{\rightskip}{0pt plus 5cm}bool Rt\+Audio\+::\+Device\+Info\+::is\+Default\+Output}\hypertarget{struct_rt_audio_1_1_device_info_a5365245e73ffe29a05734de4474acd58}{}\label{struct_rt_audio_1_1_device_info_a5365245e73ffe29a05734de4474acd58}
+true if this is the default output device. \index{Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}!name@{name}}
+\index{name@{name}!Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Rt\+Audio\+::\+Device\+Info\+::name}\hypertarget{struct_rt_audio_1_1_device_info_a24df596ab8d54f2eb540c7cf16212b3b}{}\label{struct_rt_audio_1_1_device_info_a24df596ab8d54f2eb540c7cf16212b3b}
+Character string device identifier. \index{Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}!native\+Formats@{native\+Formats}}
+\index{native\+Formats@{native\+Formats}!Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}}
+\subsubsection[{native\+Formats}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rt\+Audio\+Format} Rt\+Audio\+::\+Device\+Info\+::native\+Formats}\hypertarget{struct_rt_audio_1_1_device_info_a23251b549b89b2fe04a57fcd7cb76ea4}{}\label{struct_rt_audio_1_1_device_info_a23251b549b89b2fe04a57fcd7cb76ea4}
+Bit mask of supported data formats. \index{Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}!output\+Channels@{output\+Channels}}
+\index{output\+Channels@{output\+Channels}!Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}}
+\subsubsection[{output\+Channels}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Rt\+Audio\+::\+Device\+Info\+::output\+Channels}\hypertarget{struct_rt_audio_1_1_device_info_a81aaf488f8158ef55b1bb678f66feb7d}{}\label{struct_rt_audio_1_1_device_info_a81aaf488f8158ef55b1bb678f66feb7d}
+Maximum output channels supported by device. \index{Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}!preferred\+Sample\+Rate@{preferred\+Sample\+Rate}}
+\index{preferred\+Sample\+Rate@{preferred\+Sample\+Rate}!Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}}
+\subsubsection[{preferred\+Sample\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Rt\+Audio\+::\+Device\+Info\+::preferred\+Sample\+Rate}\hypertarget{struct_rt_audio_1_1_device_info_ae9f35de296b33ae1f4e7baab8fd3be6e}{}\label{struct_rt_audio_1_1_device_info_ae9f35de296b33ae1f4e7baab8fd3be6e}
+Preferred sample rate, eg. for W\+A\+S\+A\+PI the system sample rate. \index{Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}!probed@{probed}}
+\index{probed@{probed}!Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}}
+\subsubsection[{probed}]{\setlength{\rightskip}{0pt plus 5cm}bool Rt\+Audio\+::\+Device\+Info\+::probed}\hypertarget{struct_rt_audio_1_1_device_info_a97573717ccb1e75a834a0a108cd6982d}{}\label{struct_rt_audio_1_1_device_info_a97573717ccb1e75a834a0a108cd6982d}
+true if the device capabilities were successfully probed. \index{Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}!sample\+Rates@{sample\+Rates}}
+\index{sample\+Rates@{sample\+Rates}!Rt\+Audio\+::\+Device\+Info@{Rt\+Audio\+::\+Device\+Info}}
+\subsubsection[{sample\+Rates}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$unsigned int$>$ Rt\+Audio\+::\+Device\+Info\+::sample\+Rates}\hypertarget{struct_rt_audio_1_1_device_info_afa65f5f92f66ce7aacd3ff35e11b230f}{}\label{struct_rt_audio_1_1_device_info_afa65f5f92f66ce7aacd3ff35e11b230f}
+Supported sample rates (queried from list of standard rates). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/rtaudio/\hyperlink{_rt_audio_8h}{Rt\+Audio.\+h}\end{DoxyCompactItemize}

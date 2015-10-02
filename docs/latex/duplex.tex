@@ -1,0 +1,75 @@
+Finally, it is easy to use \hyperlink{class_rt_audio}{Rt\+Audio} for simultaneous audio input/output, or duplex operation. In this example, we simply pass the input data back to the output.
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{_rt_audio_8h}{RtAudio.h}"}
+\textcolor{preprocessor}{#include <iostream>}
+\textcolor{preprocessor}{#include <cstdlib>}
+\textcolor{preprocessor}{#include <cstring>}
+
+\textcolor{comment}{// Pass-through function.}
+\textcolor{keywordtype}{int} inout( \textcolor{keywordtype}{void} *outputBuffer, \textcolor{keywordtype}{void} *inputBuffer, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nBufferFrames,
+           \textcolor{keywordtype}{double} streamTime, \hyperlink{_rt_audio_8h_a80e306d363583da3b0a1b65d9b57c806}{RtAudioStreamStatus} status, \textcolor{keywordtype}{void} *data )
+\{
+  \textcolor{comment}{// Since the number of input and output channels is equal, we can do}
+  \textcolor{comment}{// a simple buffer copy operation here.}
+  \textcolor{keywordflow}{if} ( status ) std::cout << \textcolor{stringliteral}{"Stream over/underflow detected."} << std::endl;
+
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *bytes = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *) data;
+  memcpy( outputBuffer, inputBuffer, *bytes );
+  \textcolor{keywordflow}{return} 0;
+\}
+
+\textcolor{keywordtype}{int} main()
+\{
+ \hyperlink{class_rt_audio}{RtAudio} adac;
+  \textcolor{keywordflow}{if} ( adac.\hyperlink{class_rt_audio_a747ce2d73803641bbb66d6e78092aa1a}{getDeviceCount}() < 1 ) \{
+    std::cout << \textcolor{stringliteral}{"\(\backslash\)nNo audio devices found!\(\backslash\)n"};
+    exit( 0 );
+  \}
+
+  \textcolor{comment}{// Set the same number of channels for both input and output.}
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bufferBytes, bufferFrames = 512;
+  \hyperlink{struct_rt_audio_1_1_stream_parameters}{RtAudio::StreamParameters} iParams, oParams;
+  iParams.\hyperlink{struct_rt_audio_1_1_stream_parameters_ab3c72bcf3ef12149ae9a4fb597cc5489}{deviceId} = 0; \textcolor{comment}{// first available device}
+  iParams.\hyperlink{struct_rt_audio_1_1_stream_parameters_a88a10091b6e284e21235cc6f25332ebd}{nChannels} = 2;
+  oParams.\hyperlink{struct_rt_audio_1_1_stream_parameters_ab3c72bcf3ef12149ae9a4fb597cc5489}{deviceId} = 0; \textcolor{comment}{// first available device}
+  oParams.\hyperlink{struct_rt_audio_1_1_stream_parameters_a88a10091b6e284e21235cc6f25332ebd}{nChannels} = 2;
+
+  \textcolor{keywordflow}{try} \{
+    adac.\hyperlink{class_rt_audio_a6907539d2527775df778ebce32ef1e3b}{openStream}( &oParams, &iParams, RTAUDIO\_SINT32, 44100, &bufferFrames, &inout, (\textcolor{keywordtype}{void} *)&
+      bufferBytes );
+  \}
+  \textcolor{keywordflow}{catch} ( \hyperlink{class_rt_audio_error}{RtAudioError}& e ) \{
+    e.\hyperlink{class_rt_audio_error_a0124bb90075cf3201865a0ea9b43a826}{printMessage}();
+    exit( 0 );
+  \}
+
+  bufferBytes = bufferFrames * 2 * 4;
+
+  \textcolor{keywordflow}{try} \{
+    adac.\hyperlink{class_rt_audio_aec017a89629ccef66a90b60be22a2f80}{startStream}();
+
+    \textcolor{keywordtype}{char} input;
+    std::cout << \textcolor{stringliteral}{"\(\backslash\)nRunning ... press <enter> to quit.\(\backslash\)n"};
+    std::cin.get(input);
+
+    \textcolor{comment}{// Stop the stream.}
+    adac.\hyperlink{class_rt_audio_af4c241ff86936ecc8108f0d9dfe3efdd}{stopStream}();
+  \}
+  \textcolor{keywordflow}{catch} ( \hyperlink{class_rt_audio_error}{RtAudioError}& e ) \{
+    e.\hyperlink{class_rt_audio_error_a0124bb90075cf3201865a0ea9b43a826}{printMessage}();
+    \textcolor{keywordflow}{goto} cleanup;
+  \}
+
+ cleanup:
+  \textcolor{keywordflow}{if} ( adac.\hyperlink{class_rt_audio_a3863e45ff81dbe97176de0ee7545917f}{isStreamOpen}() ) adac.\hyperlink{class_rt_audio_a90d599002ad32cf250a4cb866f2cc93a}{closeStream}();
+
+  \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+
+
+In this example, audio recorded by the stream input will be played out during the next round of audio processing.
+
+\hyperlink{class_note}{Note} that a duplex stream can make use of two different devices (except when using the Linux Jack and Windows A\+S\+IO A\+P\+Is). However, this may cause timing problems due to possible device clock variations, unless a common external \char`\"{}sync\char`\"{} is provided. 

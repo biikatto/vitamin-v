@@ -1,0 +1,113 @@
+\hypertarget{class_rt_midi_error}{}\section{Rt\+Midi\+Error Class Reference}
+\label{class_rt_midi_error}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}}
+
+
+Exception handling class for \hyperlink{class_rt_midi}{Rt\+Midi}.  
+
+
+
+
+{\ttfamily \#include $<$Rt\+Midi.\+h$>$}
+
+Inheritance diagram for Rt\+Midi\+Error\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rt_midi_error}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905ee}{Type} \{ \\*
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea778e66d730c9ff2aab7000aed36ca8df}{W\+A\+R\+N\+I\+NG}, 
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eead9dcf332975d9d0358f7db349d565c8a}{D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG}, 
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eeabd80a28d9fedd9a861c72d3fae096a79}{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}, 
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea2edbf3e6f6b2383bc3e352b4417326d7}{N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND}, 
+\\*
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea8c87118f56675ecd8fd859e01a61338a}{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE}, 
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea4a3fe6c709b50a4c85c470406ea4fddf}{M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea707297abd1e7f447f0823a9de2ee1d8f}{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}, 
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea25eb917874adfebc2029c41072aef05a}{I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE}, 
+\\*
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eeaacbd6476ea9704d758d03b7175f5c4c9}{D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eeaf2708443eebfe5dcd0f656e22a73cfd8}{S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea9928f70b060712c44f4f23432bc8b76c}{T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR}
+ \}\begin{DoxyCompactList}\small\item\em Defined \hyperlink{class_rt_midi_error}{Rt\+Midi\+Error} types. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rt_midi_error_af0952e4900c79dc0928a40fc62cb68d1}{Rt\+Midi\+Error} (const std\+::string \&message, \hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905ee}{Type} type=\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905eeabd80a28d9fedd9a861c72d3fae096a79}{Rt\+Midi\+Error\+::\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED})  throw ()\hypertarget{class_rt_midi_error_af0952e4900c79dc0928a40fc62cb68d1}{}\label{class_rt_midi_error_af0952e4900c79dc0928a40fc62cb68d1}
+
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_rt_midi_error_ac3223037a1c192d37fbd285e4a52878f}{$\sim$\+Rt\+Midi\+Error} (void)  throw ()\hypertarget{class_rt_midi_error_ac3223037a1c192d37fbd285e4a52878f}{}\label{class_rt_midi_error_ac3223037a1c192d37fbd285e4a52878f}
+
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_rt_midi_error_a7f45ae29b66b25817a7aa7b4ea81ab71}{print\+Message} (void) const   throw ()\hypertarget{class_rt_midi_error_a7f45ae29b66b25817a7aa7b4ea81ab71}{}\label{class_rt_midi_error_a7f45ae29b66b25817a7aa7b4ea81ab71}
+
+\begin{DoxyCompactList}\small\item\em Prints thrown error message to stderr. \end{DoxyCompactList}\item 
+virtual const \hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905ee}{Type} \& \hyperlink{class_rt_midi_error_acd8f1c1d2c6cd5bf678700ed9f106061}{get\+Type} (void) const   throw ()\hypertarget{class_rt_midi_error_acd8f1c1d2c6cd5bf678700ed9f106061}{}\label{class_rt_midi_error_acd8f1c1d2c6cd5bf678700ed9f106061}
+
+\begin{DoxyCompactList}\small\item\em Returns the thrown error message type. \end{DoxyCompactList}\item 
+virtual const std\+::string \& \hyperlink{class_rt_midi_error_acc182a8406954427c77c9db6f6907fa7}{get\+Message} (void) const   throw ()\hypertarget{class_rt_midi_error_acc182a8406954427c77c9db6f6907fa7}{}\label{class_rt_midi_error_acc182a8406954427c77c9db6f6907fa7}
+
+\begin{DoxyCompactList}\small\item\em Returns the thrown error message string. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \hyperlink{class_rt_midi_error_a2ea4e8eb6ac38b123adb2a74aab90d1b}{what} (void) const   throw ()\hypertarget{class_rt_midi_error_a2ea4e8eb6ac38b123adb2a74aab90d1b}{}\label{class_rt_midi_error_a2ea4e8eb6ac38b123adb2a74aab90d1b}
+
+\begin{DoxyCompactList}\small\item\em Returns the thrown error message as a c-\/style string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries message\+\_\+}\hypertarget{class_rt_midi_error_ad89ea4d95b72fe663836dd5b33e60857}{}\label{class_rt_midi_error_ad89ea4d95b72fe663836dd5b33e60857}
+
+\item 
+\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905ee}{Type} {\bfseries type\+\_\+}\hypertarget{class_rt_midi_error_ad6f67600238af5e9378467e6b20f79dd}{}\label{class_rt_midi_error_ad6f67600238af5e9378467e6b20f79dd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Exception handling class for \hyperlink{class_rt_midi}{Rt\+Midi}. 
+
+The \hyperlink{class_rt_midi_error}{Rt\+Midi\+Error} class is quite simple but it does allow errors to be \char`\"{}caught\char`\"{} by \hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905ee}{Rt\+Midi\+Error\+::\+Type}. See the \hyperlink{class_rt_midi}{Rt\+Midi} documentation to know which methods can throw an \hyperlink{class_rt_midi_error}{Rt\+Midi\+Error}. 
+
+\subsection{Member Enumeration Documentation}
+\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!Type@{Type}}
+\index{Type@{Type}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Rt\+Midi\+Error\+::\+Type}}\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905ee}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905ee}
+
+
+Defined \hyperlink{class_rt_midi_error}{Rt\+Midi\+Error} types. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{W\+A\+R\+N\+I\+NG@{W\+A\+R\+N\+I\+NG}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!W\+A\+R\+N\+I\+NG@{W\+A\+R\+N\+I\+NG}}\item[{\em 
+W\+A\+R\+N\+I\+NG\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea778e66d730c9ff2aab7000aed36ca8df}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea778e66d730c9ff2aab7000aed36ca8df}
+}]A non-\/critical error. \index{D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG}}\item[{\em 
+D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905eead9dcf332975d9d0358f7db349d565c8a}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905eead9dcf332975d9d0358f7db349d565c8a}
+}]A non-\/critical error which might be useful for debugging. \index{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}}\item[{\em 
+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905eeabd80a28d9fedd9a861c72d3fae096a79}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905eeabd80a28d9fedd9a861c72d3fae096a79}
+}]The default, unspecified error type. \index{N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND@{N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND@{N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND}}\item[{\em 
+N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea2edbf3e6f6b2383bc3e352b4417326d7}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea2edbf3e6f6b2383bc3e352b4417326d7}
+}]No devices found on system. \index{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea8c87118f56675ecd8fd859e01a61338a}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea8c87118f56675ecd8fd859e01a61338a}
+}]An invalid device ID was specified. \index{M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR@{M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR@{M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea4a3fe6c709b50a4c85c470406ea4fddf}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea4a3fe6c709b50a4c85c470406ea4fddf}
+}]An error occured during memory allocation. \index{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea707297abd1e7f447f0823a9de2ee1d8f}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea707297abd1e7f447f0823a9de2ee1d8f}
+}]An invalid parameter was specified to a function. \index{I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea25eb917874adfebc2029c41072aef05a}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea25eb917874adfebc2029c41072aef05a}
+}]The function was called incorrectly. \index{D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR@{D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR@{D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905eeaacbd6476ea9704d758d03b7175f5c4c9}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905eeaacbd6476ea9704d758d03b7175f5c4c9}
+}]A system driver error occured. \index{S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR@{S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR@{S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905eeaf2708443eebfe5dcd0f656e22a73cfd8}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905eeaf2708443eebfe5dcd0f656e22a73cfd8}
+}]A system error occured. \index{T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR@{T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR}!Rt\+Midi\+Error@{Rt\+Midi\+Error}}\index{Rt\+Midi\+Error@{Rt\+Midi\+Error}!T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR@{T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR\hypertarget{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea9928f70b060712c44f4f23432bc8b76c}{}\label{class_rt_midi_error_a741314057cec5fb8c743c12f284905eea9928f70b060712c44f4f23432bc8b76c}
+}]A thread error occured. \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/rtmidi/\hyperlink{_rt_midi_8h}{Rt\+Midi.\+h}\end{DoxyCompactItemize}

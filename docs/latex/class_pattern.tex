@@ -1,0 +1,116 @@
+\hypertarget{class_pattern}{}\section{Pattern Class Reference}
+\label{class_pattern}\index{Pattern@{Pattern}}
+
+
+A pattern, which holds notes for one track.  
+
+
+
+
+{\ttfamily \#include $<$pattern.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pattern_afd3d1d98b25659474df2be957f46d736}{Pattern} (unsigned int \hyperlink{class_pattern_a118a30585315cc29e801b6a37832c26f}{length}=64)\hypertarget{class_pattern_afd3d1d98b25659474df2be957f46d736}{}\label{class_pattern_afd3d1d98b25659474df2be957f46d736}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_pattern_a118a30585315cc29e801b6a37832c26f}{length} () const \hypertarget{class_pattern_a118a30585315cc29e801b6a37832c26f}{}\label{class_pattern_a118a30585315cc29e801b6a37832c26f}
+
+\begin{DoxyCompactList}\small\item\em Return the length of the pattern. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_pattern_a1d30ffecfb7399e795b9f5484bd62c98}{length} (const unsigned int new\+\_\+length)\hypertarget{class_pattern_a1d30ffecfb7399e795b9f5484bd62c98}{}\label{class_pattern_a1d30ffecfb7399e795b9f5484bd62c98}
+
+\begin{DoxyCompactList}\small\item\em Set the length of the pattern and return it. \end{DoxyCompactList}\item 
+int \hyperlink{class_pattern_a2379d1a0732988e5df08e7156d7b8a58}{vector\+\_\+length} () const \hypertarget{class_pattern_a2379d1a0732988e5df08e7156d7b8a58}{}\label{class_pattern_a2379d1a0732988e5df08e7156d7b8a58}
+
+\begin{DoxyCompactList}\small\item\em Return the length of the underlying \hyperlink{class_note}{Note} vector. \end{DoxyCompactList}\item 
+void \hyperlink{class_pattern_a766e2ec0a5951d0cea3939a026162924}{clear} ()\hypertarget{class_pattern_a766e2ec0a5951d0cea3939a026162924}{}\label{class_pattern_a766e2ec0a5951d0cea3939a026162924}
+
+\begin{DoxyCompactList}\small\item\em Clear the pattern. \end{DoxyCompactList}\item 
+void \hyperlink{class_pattern_a39aa3043cbe604dbc140c001d8afaa15}{clear\+\_\+range} (size\+\_\+t begin, size\+\_\+t \hyperlink{class_pattern_a2ed124ec2784442b01ea22f9b04bbeaa}{end})\hypertarget{class_pattern_a39aa3043cbe604dbc140c001d8afaa15}{}\label{class_pattern_a39aa3043cbe604dbc140c001d8afaa15}
+
+\begin{DoxyCompactList}\small\item\em Clear a range of Notes in the pattern, from indexes begin to end. \end{DoxyCompactList}\item 
+\hyperlink{class_note}{Note} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t idx)\hypertarget{class_pattern_aee209f505e0be32dfc7d781436571569}{}\label{class_pattern_aee209f505e0be32dfc7d781436571569}
+
+\item 
+const \hyperlink{class_note}{Note} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t idx) const \hypertarget{class_pattern_a575538fbf12d8ed5406029b4f1c30910}{}\label{class_pattern_a575538fbf12d8ed5406029b4f1c30910}
+
+\item 
+\+\_\+\+\_\+wrap\+\_\+iter$<$ \hyperlink{class_note}{Note} $\ast$ $>$ {\bfseries begin} ()\hypertarget{class_pattern_a8281a6d97bbaa94f6d11ad4d52ab5bb8}{}\label{class_pattern_a8281a6d97bbaa94f6d11ad4d52ab5bb8}
+
+\item 
+\+\_\+\+\_\+wrap\+\_\+iter$<$ \hyperlink{class_note}{Note} $\ast$ $>$ \hyperlink{class_pattern_a2ed124ec2784442b01ea22f9b04bbeaa}{end} ()
+\item 
+reverse\+\_\+iterator$<$ \+\_\+\+\_\+wrap\+\_\+iter$<$ \hyperlink{class_note}{Note} $\ast$ $>$ $>$ \hyperlink{class_pattern_ae0d9e26c2712e71d4982bff455056ee6}{rbegin} ()
+\item 
+reverse\+\_\+iterator$<$ \+\_\+\+\_\+wrap\+\_\+iter$<$ \hyperlink{class_note}{Note} $\ast$ $>$ $>$ \hyperlink{class_pattern_a939ecb5df0c1e9afcf8fa39cb0b0acaf}{rend} ()
+\item 
+\+\_\+\+\_\+wrap\+\_\+iter$<$ const \hyperlink{class_note}{Note} $\ast$ $>$ \hyperlink{class_pattern_ad9c88d194d6d0532e3e230cda7da537d}{cbegin} ()
+\item 
+\+\_\+\+\_\+wrap\+\_\+iter$<$ const \hyperlink{class_note}{Note} $\ast$ $>$ \hyperlink{class_pattern_ae18cd0015e99592aa5c34d71c68ccf91}{cend} ()
+\item 
+reverse\+\_\+iterator$<$ \+\_\+\+\_\+wrap\+\_\+iter$<$ const \hyperlink{class_note}{Note} $\ast$ $>$ $>$ \hyperlink{class_pattern_a7eadf7d4655b40d9a9fa69e6bd773c00}{crbegin} ()
+\item 
+reverse\+\_\+iterator$<$ \+\_\+\+\_\+wrap\+\_\+iter$<$ const \hyperlink{class_note}{Note} $\ast$ $>$ $>$ \hyperlink{class_pattern_a5c211f38a7b51d05f9068d5ff2f6743b}{crend} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A pattern, which holds notes for one track. 
+
+\subsection{Member Function Documentation}
+\index{Pattern@{Pattern}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!Pattern@{Pattern}}
+\subsubsection[{cbegin()}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+\_\+wrap\+\_\+iter$<$const {\bf Note}$\ast$$>$ Pattern\+::cbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_pattern_ad9c88d194d6d0532e3e230cda7da537d}{}\label{class_pattern_ad9c88d194d6d0532e3e230cda7da537d}
+Return a reverse iterator pointing to the past-\/the-\/end \hyperlink{class_note}{Note} in the reversed pattern. \index{Pattern@{Pattern}!cend@{cend}}
+\index{cend@{cend}!Pattern@{Pattern}}
+\subsubsection[{cend()}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+\_\+wrap\+\_\+iter$<$const {\bf Note}$\ast$$>$ Pattern\+::cend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_pattern_ae18cd0015e99592aa5c34d71c68ccf91}{}\label{class_pattern_ae18cd0015e99592aa5c34d71c68ccf91}
+Return a const\+\_\+iterator to the beginning. \index{Pattern@{Pattern}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!Pattern@{Pattern}}
+\subsubsection[{crbegin()}]{\setlength{\rightskip}{0pt plus 5cm}reverse\+\_\+iterator$<$\+\_\+\+\_\+wrap\+\_\+iter$<$const {\bf Note}$\ast$$>$ $>$ Pattern\+::crbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_pattern_a7eadf7d4655b40d9a9fa69e6bd773c00}{}\label{class_pattern_a7eadf7d4655b40d9a9fa69e6bd773c00}
+Return a const\+\_\+iterator to the end. \index{Pattern@{Pattern}!crend@{crend}}
+\index{crend@{crend}!Pattern@{Pattern}}
+\subsubsection[{crend()}]{\setlength{\rightskip}{0pt plus 5cm}reverse\+\_\+iterator$<$\+\_\+\+\_\+wrap\+\_\+iter$<$const {\bf Note}$\ast$$>$ $>$ Pattern\+::crend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_pattern_a5c211f38a7b51d05f9068d5ff2f6743b}{}\label{class_pattern_a5c211f38a7b51d05f9068d5ff2f6743b}
+Return a const\+\_\+reverse\+\_\+iterator to the beginning. \index{Pattern@{Pattern}!end@{end}}
+\index{end@{end}!Pattern@{Pattern}}
+\subsubsection[{end()}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+\_\+wrap\+\_\+iter$<${\bf Note}$\ast$$>$ Pattern\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_pattern_a2ed124ec2784442b01ea22f9b04bbeaa}{}\label{class_pattern_a2ed124ec2784442b01ea22f9b04bbeaa}
+Return an iterator pointing to the first \hyperlink{class_note}{Note} in the pattern. \index{Pattern@{Pattern}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Pattern@{Pattern}}
+\subsubsection[{rbegin()}]{\setlength{\rightskip}{0pt plus 5cm}reverse\+\_\+iterator$<$\+\_\+\+\_\+wrap\+\_\+iter$<${\bf Note}$\ast$$>$ $>$ Pattern\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_pattern_ae0d9e26c2712e71d4982bff455056ee6}{}\label{class_pattern_ae0d9e26c2712e71d4982bff455056ee6}
+Return an iterator pointing to the past-\/the-\/end \hyperlink{class_note}{Note} in the pattern. \index{Pattern@{Pattern}!rend@{rend}}
+\index{rend@{rend}!Pattern@{Pattern}}
+\subsubsection[{rend()}]{\setlength{\rightskip}{0pt plus 5cm}reverse\+\_\+iterator$<$\+\_\+\+\_\+wrap\+\_\+iter$<${\bf Note}$\ast$$>$ $>$ Pattern\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_pattern_a939ecb5df0c1e9afcf8fa39cb0b0acaf}{}\label{class_pattern_a939ecb5df0c1e9afcf8fa39cb0b0acaf}
+Return a reverse iterator pointing to the first \hyperlink{class_note}{Note} in the reversed pattern. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/pattern.\+h\item 
+src/pattern.\+cpp\end{DoxyCompactItemize}

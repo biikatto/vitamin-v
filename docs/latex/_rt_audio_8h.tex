@@ -1,0 +1,157 @@
+\hypertarget{_rt_audio_8h}{}\section{include/rtaudio/\+Rt\+Audio.h File Reference}
+\label{_rt_audio_8h}\index{include/rtaudio/\+Rt\+Audio.\+h@{include/rtaudio/\+Rt\+Audio.\+h}}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_rt_audio_error}{Rt\+Audio\+Error}
+\begin{DoxyCompactList}\small\item\em Exception handling class for \hyperlink{class_rt_audio}{Rt\+Audio}. \end{DoxyCompactList}\item 
+class \hyperlink{class_rt_audio}{Rt\+Audio}
+\begin{DoxyCompactList}\small\item\em Realtime audio i/o C++ classes. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_rt_audio_1_1_device_info}{Rt\+Audio\+::\+Device\+Info}
+\begin{DoxyCompactList}\small\item\em The public device information structure for returning queried values. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_rt_audio_1_1_stream_parameters}{Rt\+Audio\+::\+Stream\+Parameters}
+\begin{DoxyCompactList}\small\item\em The structure for specifying input or ouput stream parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_rt_audio_1_1_stream_options}{Rt\+Audio\+::\+Stream\+Options}
+\begin{DoxyCompactList}\small\item\em The structure for specifying stream options. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_callback_info}{Callback\+Info}
+\item 
+class \hyperlink{class_s24}{S24}
+\item 
+class \hyperlink{class_rt_api}{Rt\+Api}
+\item 
+struct \hyperlink{struct_rt_api_1_1_convert_info}{Rt\+Api\+::\+Convert\+Info}
+\item 
+struct \hyperlink{struct_rt_api_1_1_rt_api_stream}{Rt\+Api\+::\+Rt\+Api\+Stream}
+\item 
+class \hyperlink{class_rt_api_dummy}{Rt\+Api\+Dummy}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries R\+T\+A\+U\+D\+I\+O\+\_\+\+V\+E\+R\+S\+I\+ON}~\char`\"{}4.\+1.\+1\char`\"{}\hypertarget{_rt_audio_8h_a55e84392641d5d20f789d821e6f17e64}{}\label{_rt_audio_8h_a55e84392641d5d20f789d821e6f17e64}
+
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+R\+T\+A\+U\+D\+I\+O\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+\_\+}\hypertarget{_rt_audio_8h_aa7de1be6d74d64687f6a0bff6e8f1da0}{}\label{_rt_audio_8h_aa7de1be6d74d64687f6a0bff6e8f1da0}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned long \hyperlink{_rt_audio_8h_aafca92882d25915560018873221e44b8}{Rt\+Audio\+Format}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_rt_audio}{Rt\+Audio} data format type. \end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{_rt_audio_8h_a2c0f59b200dcec4d4e760f9166b29c41}{Rt\+Audio\+Stream\+Flags}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_rt_audio}{Rt\+Audio} stream option flags. \end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{_rt_audio_8h_a80e306d363583da3b0a1b65d9b57c806}{Rt\+Audio\+Stream\+Status}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_rt_audio}{Rt\+Audio} stream status (over-\/ or underflow) flags. \end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{_rt_audio_8h_aa96e52a4e057d224cda0c39926e5c652}{Rt\+Audio\+Callback}) (void $\ast$output\+Buffer, void $\ast$input\+Buffer, unsigned int n\+Frames, double stream\+Time, \hyperlink{_rt_audio_8h_a80e306d363583da3b0a1b65d9b57c806}{Rt\+Audio\+Stream\+Status} status, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_rt_audio}{Rt\+Audio} callback function prototype. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{_rt_audio_8h_a255b480e1e3c2818d838fb12d13f3123}{Rt\+Audio\+Error\+Callback}) (\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073}{Rt\+Audio\+Error\+::\+Type} type, const std\+::string \&error\+Text)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_rt_audio}{Rt\+Audio} error callback function prototype. \end{DoxyCompactList}\item 
+typedef int {\bfseries Thread\+Handle}\hypertarget{_rt_audio_8h_a567ef6c29f85f35ac3e0f3cb808dc6c3}{}\label{_rt_audio_8h_a567ef6c29f85f35ac3e0f3cb808dc6c3}
+
+\item 
+typedef int {\bfseries Stream\+Mutex}\hypertarget{_rt_audio_8h_aee70a2c8c580d0a15b1a9a74943d41d2}{}\label{_rt_audio_8h_aee70a2c8c580d0a15b1a9a74943d41d2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{Rt\+Audio.\+h@{Rt\+Audio.\+h}!Rt\+Audio\+Callback@{Rt\+Audio\+Callback}}
+\index{Rt\+Audio\+Callback@{Rt\+Audio\+Callback}!Rt\+Audio.\+h@{Rt\+Audio.\+h}}
+\subsubsection[{Rt\+Audio\+Callback}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ Rt\+Audio\+Callback) (void $\ast$output\+Buffer, void $\ast$input\+Buffer, unsigned int n\+Frames, double stream\+Time, {\bf Rt\+Audio\+Stream\+Status} status, void $\ast$user\+Data)}\hypertarget{_rt_audio_8h_aa96e52a4e057d224cda0c39926e5c652}{}\label{_rt_audio_8h_aa96e52a4e057d224cda0c39926e5c652}
+
+
+\hyperlink{class_rt_audio}{Rt\+Audio} callback function prototype. 
+
+All \hyperlink{class_rt_audio}{Rt\+Audio} clients must create a function of type Rt\+Audio\+Callback to read and/or write data from/to the audio stream. When the underlying audio system is ready for new input or output data, this function will be invoked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+Buffer} & For output (or duplex) streams, the client should write {\ttfamily n\+Frames} of audio sample frames into this buffer. This argument should be recast to the datatype specified when the stream was opened. For input-\/only streams, this argument will be N\+U\+LL.\\
+\hline
+{\em input\+Buffer} & For input (or duplex) streams, this buffer will hold {\ttfamily n\+Frames} of input audio sample frames. This argument should be recast to the datatype specified when the stream was opened. For output-\/only streams, this argument will be N\+U\+LL.\\
+\hline
+{\em n\+Frames} & The number of sample frames of input or output data in the buffers. The actual buffer size in bytes is dependent on the data type and number of channels in use.\\
+\hline
+{\em stream\+Time} & The number of seconds that have elapsed since the stream was started.\\
+\hline
+{\em status} & If non-\/zero, this argument indicates a data overflow or underflow condition for the stream. The particular condition can be determined by comparison with the Rt\+Audio\+Stream\+Status flags.\\
+\hline
+{\em user\+Data} & A pointer to optional data provided by the client when opening the stream (default = N\+U\+LL).\\
+\hline
+\end{DoxyParams}
+To continue normal stream operation, the Rt\+Audio\+Callback function should return a value of zero. To stop the stream and drain the output buffer, the function should return a value of one. To abort the stream immediately, the client should return a value of two. \index{Rt\+Audio.\+h@{Rt\+Audio.\+h}!Rt\+Audio\+Error\+Callback@{Rt\+Audio\+Error\+Callback}}
+\index{Rt\+Audio\+Error\+Callback@{Rt\+Audio\+Error\+Callback}!Rt\+Audio.\+h@{Rt\+Audio.\+h}}
+\subsubsection[{Rt\+Audio\+Error\+Callback}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Rt\+Audio\+Error\+Callback) ({\bf Rt\+Audio\+Error\+::\+Type} type, const std\+::string \&error\+Text)}\hypertarget{_rt_audio_8h_a255b480e1e3c2818d838fb12d13f3123}{}\label{_rt_audio_8h_a255b480e1e3c2818d838fb12d13f3123}
+
+
+\hyperlink{class_rt_audio}{Rt\+Audio} error callback function prototype. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of error. \\
+\hline
+{\em error\+Text} & Error description. \\
+\hline
+\end{DoxyParams}
+\index{Rt\+Audio.\+h@{Rt\+Audio.\+h}!Rt\+Audio\+Format@{Rt\+Audio\+Format}}
+\index{Rt\+Audio\+Format@{Rt\+Audio\+Format}!Rt\+Audio.\+h@{Rt\+Audio.\+h}}
+\subsubsection[{Rt\+Audio\+Format}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf Rt\+Audio\+Format}}\hypertarget{_rt_audio_8h_aafca92882d25915560018873221e44b8}{}\label{_rt_audio_8h_aafca92882d25915560018873221e44b8}
+
+
+\hyperlink{class_rt_audio}{Rt\+Audio} data format type. 
+
+Support for signed integers and floats. Audio data fed to/from an \hyperlink{class_rt_audio}{Rt\+Audio} stream is assumed to A\+L\+W\+A\+YS be in host byte order. The internal routines will automatically take care of any necessary byte-\/swapping between the host format and the soundcard. Thus, endian-\/ness is not a concern in the following format definitions.
+
+
+\begin{DoxyItemize}
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+S\+I\+N\+T8\+:} 8-\/bit signed integer.
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+S\+I\+N\+T16\+:} 16-\/bit signed integer.
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+S\+I\+N\+T24\+:} 24-\/bit signed integer.
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+S\+I\+N\+T32\+:} 32-\/bit signed integer.
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+F\+L\+O\+A\+T32\+:} Normalized between plus/minus 1.\+0.
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+F\+L\+O\+A\+T64\+:} Normalized between plus/minus 1.\+0. 
+\end{DoxyItemize}\index{Rt\+Audio.\+h@{Rt\+Audio.\+h}!Rt\+Audio\+Stream\+Flags@{Rt\+Audio\+Stream\+Flags}}
+\index{Rt\+Audio\+Stream\+Flags@{Rt\+Audio\+Stream\+Flags}!Rt\+Audio.\+h@{Rt\+Audio.\+h}}
+\subsubsection[{Rt\+Audio\+Stream\+Flags}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf Rt\+Audio\+Stream\+Flags}}\hypertarget{_rt_audio_8h_a2c0f59b200dcec4d4e760f9166b29c41}{}\label{_rt_audio_8h_a2c0f59b200dcec4d4e760f9166b29c41}
+
+
+\hyperlink{class_rt_audio}{Rt\+Audio} stream option flags. 
+
+The following flags can be OR\textquotesingle{}ed together to allow a client to make changes to the default stream behavior\+:
+
+
+\begin{DoxyItemize}
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+N\+O\+N\+I\+N\+T\+E\+R\+L\+E\+A\+V\+ED\+:} Use non-\/interleaved buffers (default = interleaved).
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+E\+\_\+\+L\+A\+T\+E\+N\+CY\+:} Attempt to set stream parameters for lowest possible latency.
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+H\+O\+G\+\_\+\+D\+E\+V\+I\+CE\+:} Attempt grab device for exclusive use.
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+A\+L\+S\+A\+\_\+\+U\+S\+E\+\_\+\+D\+E\+F\+A\+U\+LT\+:} Use the \char`\"{}default\char`\"{} P\+CM device (A\+L\+SA only).
+\end{DoxyItemize}
+
+By default, \hyperlink{class_rt_audio}{Rt\+Audio} streams pass and receive audio data from the client in an interleaved format. By passing the R\+T\+A\+U\+D\+I\+O\+\_\+\+N\+O\+N\+I\+N\+T\+E\+R\+L\+E\+A\+V\+ED flag to the open\+Stream() function, audio data will instead be presented in non-\/interleaved buffers. In this case, each buffer argument in the Rt\+Audio\+Callback function will point to a single array of data, with {\ttfamily n\+Frames} samples for each channel concatenated back-\/to-\/back. For example, the first sample of data for the second channel would be located at index {\ttfamily n\+Frames} (assuming the {\ttfamily buffer} pointer was recast to the correct data type for the stream).
+
+Certain audio A\+P\+Is offer a number of parameters that influence the I/O latency of a stream. By default, \hyperlink{class_rt_audio}{Rt\+Audio} will attempt to set these parameters internally for robust (glitch-\/free) performance (though some A\+P\+Is, like Windows Direct Sound, make this difficult). By passing the R\+T\+A\+U\+D\+I\+O\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+E\+\_\+\+L\+A\+T\+E\+N\+CY flag to the open\+Stream() function, internal stream settings will be influenced in an attempt to minimize stream latency, though possibly at the expense of stream performance.
+
+If the R\+T\+A\+U\+D\+I\+O\+\_\+\+H\+O\+G\+\_\+\+D\+E\+V\+I\+CE flag is set, \hyperlink{class_rt_audio}{Rt\+Audio} will attempt to open the input and/or output stream device(s) for exclusive use. \hyperlink{class_note}{Note} that this is not possible with all supported audio A\+P\+Is.
+
+If the R\+T\+A\+U\+D\+I\+O\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+R\+E\+A\+L\+T\+I\+ME flag is set, \hyperlink{class_rt_audio}{Rt\+Audio} will attempt to select realtime scheduling (round-\/robin) for the callback thread.
+
+If the R\+T\+A\+U\+D\+I\+O\+\_\+\+A\+L\+S\+A\+\_\+\+U\+S\+E\+\_\+\+D\+E\+F\+A\+U\+LT flag is set, \hyperlink{class_rt_audio}{Rt\+Audio} will attempt to open the \char`\"{}default\char`\"{} P\+CM device when using the A\+L\+SA A\+PI. \hyperlink{class_note}{Note} that this will override any specified input or output device id. \index{Rt\+Audio.\+h@{Rt\+Audio.\+h}!Rt\+Audio\+Stream\+Status@{Rt\+Audio\+Stream\+Status}}
+\index{Rt\+Audio\+Stream\+Status@{Rt\+Audio\+Stream\+Status}!Rt\+Audio.\+h@{Rt\+Audio.\+h}}
+\subsubsection[{Rt\+Audio\+Stream\+Status}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf Rt\+Audio\+Stream\+Status}}\hypertarget{_rt_audio_8h_a80e306d363583da3b0a1b65d9b57c806}{}\label{_rt_audio_8h_a80e306d363583da3b0a1b65d9b57c806}
+
+
+\hyperlink{class_rt_audio}{Rt\+Audio} stream status (over-\/ or underflow) flags. 
+
+Notification of a stream over-\/ or underflow is indicated by a non-\/zero stream {\ttfamily status} argument in the Rt\+Audio\+Callback function. The stream status can be one of the following two options, depending on whether the stream is open for output and/or input\+:
+
+
+\begin{DoxyItemize}
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+I\+N\+P\+U\+T\+\_\+\+O\+V\+E\+R\+F\+L\+OW\+:} Input data was discarded because of an overflow condition at the driver.
+\item {\itshape R\+T\+A\+U\+D\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW\+:} The output buffer ran low, likely producing a break in the output sound. 
+\end{DoxyItemize}

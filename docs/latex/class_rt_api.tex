@@ -1,0 +1,211 @@
+\hypertarget{class_rt_api}{}\section{Rt\+Api Class Reference}
+\label{class_rt_api}\index{Rt\+Api@{Rt\+Api}}
+Inheritance diagram for Rt\+Api\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rt_api}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_rt_api_1_1_convert_info}{Convert\+Info}
+\item 
+struct \hyperlink{struct_rt_api_1_1_rt_api_stream}{Rt\+Api\+Stream}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_rt_audio_ac9b6f625da88249d08a8409a9db0d849}{Rt\+Audio\+::\+Api} {\bfseries get\+Current\+Api} (void)=0\hypertarget{class_rt_api_aace5faa22a1615993d038c7acb37dbf4}{}\label{class_rt_api_aace5faa22a1615993d038c7acb37dbf4}
+
+\item 
+virtual unsigned int {\bfseries get\+Device\+Count} (void)=0\hypertarget{class_rt_api_a4efee04d90b46722e80fce09cd72dfb3}{}\label{class_rt_api_a4efee04d90b46722e80fce09cd72dfb3}
+
+\item 
+virtual \hyperlink{struct_rt_audio_1_1_device_info}{Rt\+Audio\+::\+Device\+Info} {\bfseries get\+Device\+Info} (unsigned int device)=0\hypertarget{class_rt_api_a62787b01c30a6addb243cd7da794dfdc}{}\label{class_rt_api_a62787b01c30a6addb243cd7da794dfdc}
+
+\item 
+virtual unsigned int {\bfseries get\+Default\+Input\+Device} (void)\hypertarget{class_rt_api_a6178ebc0e78bfdd277d7fedf7b88d44f}{}\label{class_rt_api_a6178ebc0e78bfdd277d7fedf7b88d44f}
+
+\item 
+virtual unsigned int {\bfseries get\+Default\+Output\+Device} (void)\hypertarget{class_rt_api_afbe763b59fb7a3d346eb0c95945950c7}{}\label{class_rt_api_afbe763b59fb7a3d346eb0c95945950c7}
+
+\item 
+void {\bfseries open\+Stream} (\hyperlink{struct_rt_audio_1_1_stream_parameters}{Rt\+Audio\+::\+Stream\+Parameters} $\ast$output\+Parameters, \hyperlink{struct_rt_audio_1_1_stream_parameters}{Rt\+Audio\+::\+Stream\+Parameters} $\ast$input\+Parameters, \hyperlink{_rt_audio_8h_aafca92882d25915560018873221e44b8}{Rt\+Audio\+Format} format, unsigned int sample\+Rate, unsigned int $\ast$buffer\+Frames, \hyperlink{_rt_audio_8h_aa96e52a4e057d224cda0c39926e5c652}{Rt\+Audio\+Callback} callback, void $\ast$user\+Data, \hyperlink{struct_rt_audio_1_1_stream_options}{Rt\+Audio\+::\+Stream\+Options} $\ast$options, \hyperlink{_rt_audio_8h_a255b480e1e3c2818d838fb12d13f3123}{Rt\+Audio\+Error\+Callback} error\+Callback)\hypertarget{class_rt_api_a5db36650d77680d2af18ab0b6ff2f3a9}{}\label{class_rt_api_a5db36650d77680d2af18ab0b6ff2f3a9}
+
+\item 
+virtual void {\bfseries close\+Stream} (void)\hypertarget{class_rt_api_a13e0f615a63a540446bd8bb7e44c293f}{}\label{class_rt_api_a13e0f615a63a540446bd8bb7e44c293f}
+
+\item 
+virtual void {\bfseries start\+Stream} (void)=0\hypertarget{class_rt_api_a10ee2f45dc6c1200da231365b4686ac8}{}\label{class_rt_api_a10ee2f45dc6c1200da231365b4686ac8}
+
+\item 
+virtual void {\bfseries stop\+Stream} (void)=0\hypertarget{class_rt_api_af17a556cb2534b53da961d3a6acba11e}{}\label{class_rt_api_af17a556cb2534b53da961d3a6acba11e}
+
+\item 
+virtual void {\bfseries abort\+Stream} (void)=0\hypertarget{class_rt_api_af65fd257cc358db6da29fbcef90287c7}{}\label{class_rt_api_af65fd257cc358db6da29fbcef90287c7}
+
+\item 
+long {\bfseries get\+Stream\+Latency} (void)\hypertarget{class_rt_api_afa13bea09f646779d8b9cbc829d7675f}{}\label{class_rt_api_afa13bea09f646779d8b9cbc829d7675f}
+
+\item 
+unsigned int {\bfseries get\+Stream\+Sample\+Rate} (void)\hypertarget{class_rt_api_a349576b3f0982428bef389a82946009d}{}\label{class_rt_api_a349576b3f0982428bef389a82946009d}
+
+\item 
+virtual double {\bfseries get\+Stream\+Time} (void)\hypertarget{class_rt_api_a5b3e624c2833c692674069cd0d13d2dc}{}\label{class_rt_api_a5b3e624c2833c692674069cd0d13d2dc}
+
+\item 
+virtual void {\bfseries set\+Stream\+Time} (double time)\hypertarget{class_rt_api_a30c5120d03bdc68c4c096a1e279ea0fe}{}\label{class_rt_api_a30c5120d03bdc68c4c096a1e279ea0fe}
+
+\item 
+bool {\bfseries is\+Stream\+Open} (void) const \hypertarget{class_rt_api_a239137ab1d22db7e35655d44162391d3}{}\label{class_rt_api_a239137ab1d22db7e35655d44162391d3}
+
+\item 
+bool {\bfseries is\+Stream\+Running} (void) const \hypertarget{class_rt_api_a6ce7d955a1e7319137214db028cfbb07}{}\label{class_rt_api_a6ce7d955a1e7319137214db028cfbb07}
+
+\item 
+void {\bfseries show\+Warnings} (bool value)\hypertarget{class_rt_api_a3c28d90eda75287192b012eba92718ec}{}\label{class_rt_api_a3c28d90eda75287192b012eba92718ec}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries F\+A\+I\+L\+U\+RE}, 
+{\bfseries S\+U\+C\+C\+E\+SS}
+ \}\hypertarget{class_rt_api_a29127ff22e82fa088256b3f6583cb495}{}\label{class_rt_api_a29127ff22e82fa088256b3f6583cb495}
+
+\item 
+enum {\bfseries Stream\+State} \{ {\bfseries S\+T\+R\+E\+A\+M\+\_\+\+S\+T\+O\+P\+P\+ED}, 
+{\bfseries S\+T\+R\+E\+A\+M\+\_\+\+S\+T\+O\+P\+P\+I\+NG}, 
+{\bfseries S\+T\+R\+E\+A\+M\+\_\+\+R\+U\+N\+N\+I\+NG}, 
+{\bfseries S\+T\+R\+E\+A\+M\+\_\+\+C\+L\+O\+S\+ED} = -\/50
+ \}\hypertarget{class_rt_api_a9941bf8dc3ead0a3de58fd8823390da7}{}\label{class_rt_api_a9941bf8dc3ead0a3de58fd8823390da7}
+
+\item 
+enum {\bfseries Stream\+Mode} \{ {\bfseries O\+U\+T\+P\+UT}, 
+{\bfseries I\+N\+P\+UT}, 
+{\bfseries D\+U\+P\+L\+EX}, 
+{\bfseries U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED} = -\/75
+ \}\hypertarget{class_rt_api_a7df4fd666bdd1ec02cffd4921cbcbebd}{}\label{class_rt_api_a7df4fd666bdd1ec02cffd4921cbcbebd}
+
+\item 
+typedef \hyperlink{class_s24}{S24} {\bfseries Int24}\hypertarget{class_rt_api_a9dc07a6666436dc0809c38435885db81}{}\label{class_rt_api_a9dc07a6666436dc0809c38435885db81}
+
+\item 
+typedef signed short {\bfseries Int16}\hypertarget{class_rt_api_aa5a524a28ea28f031ca0a0a9e024ff39}{}\label{class_rt_api_aa5a524a28ea28f031ca0a0a9e024ff39}
+
+\item 
+typedef signed int {\bfseries Int32}\hypertarget{class_rt_api_a438fed76129128575398354b306a4cc2}{}\label{class_rt_api_a438fed76129128575398354b306a4cc2}
+
+\item 
+typedef float {\bfseries Float32}\hypertarget{class_rt_api_aefb8b52708f6a43a62fcb31da11c0484}{}\label{class_rt_api_aefb8b52708f6a43a62fcb31da11c0484}
+
+\item 
+typedef double {\bfseries Float64}\hypertarget{class_rt_api_ae10c5228f8184b69c1102f5d90992f23}{}\label{class_rt_api_ae10c5228f8184b69c1102f5d90992f23}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_rt_api_a7cb2af485df310d803e7a35d3e4a2c1b}{probe\+Device\+Open} (unsigned int device, Stream\+Mode mode, unsigned int channels, unsigned int first\+Channel, unsigned int sample\+Rate, \hyperlink{_rt_audio_8h_aafca92882d25915560018873221e44b8}{Rt\+Audio\+Format} format, unsigned int $\ast$buffer\+Size, \hyperlink{struct_rt_audio_1_1_stream_options}{Rt\+Audio\+::\+Stream\+Options} $\ast$options)
+\item 
+void \hyperlink{class_rt_api_ae20a4060301413ddcddc6bf149bbf911}{tick\+Stream\+Time} (void)\hypertarget{class_rt_api_ae20a4060301413ddcddc6bf149bbf911}{}\label{class_rt_api_ae20a4060301413ddcddc6bf149bbf911}
+
+\begin{DoxyCompactList}\small\item\em A protected function used to increment the stream time. \end{DoxyCompactList}\item 
+void \hyperlink{class_rt_api_adb7ab7111510e3db1f0884a68926b5a4}{clear\+Stream\+Info} ()\hypertarget{class_rt_api_adb7ab7111510e3db1f0884a68926b5a4}{}\label{class_rt_api_adb7ab7111510e3db1f0884a68926b5a4}
+
+\begin{DoxyCompactList}\small\item\em Protected common method to clear an \hyperlink{struct_rt_api_1_1_rt_api_stream}{Rt\+Api\+Stream} structure. \end{DoxyCompactList}\item 
+void \hyperlink{class_rt_api_acb0a053f68f082bb0f7ed4d056be1ea6}{verify\+Stream} (void)
+\item 
+void \hyperlink{class_rt_api_a991f6626a0b1a79f0fec1c6a7bcebb9e}{error} (\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073}{Rt\+Audio\+Error\+::\+Type} type)\hypertarget{class_rt_api_a991f6626a0b1a79f0fec1c6a7bcebb9e}{}\label{class_rt_api_a991f6626a0b1a79f0fec1c6a7bcebb9e}
+
+\begin{DoxyCompactList}\small\item\em Protected common error method to allow global control over error handling. \end{DoxyCompactList}\item 
+void \hyperlink{class_rt_api_a85ed0a3827faddf0c796869e72800850}{convert\+Buffer} (char $\ast$out\+Buffer, char $\ast$in\+Buffer, \hyperlink{struct_rt_api_1_1_convert_info}{Convert\+Info} \&info)
+\item 
+void \hyperlink{class_rt_api_a0d1b716b762e865a5b460be2117bb5ed}{byte\+Swap\+Buffer} (char $\ast$buffer, unsigned int samples, \hyperlink{_rt_audio_8h_aafca92882d25915560018873221e44b8}{Rt\+Audio\+Format} format)\hypertarget{class_rt_api_a0d1b716b762e865a5b460be2117bb5ed}{}\label{class_rt_api_a0d1b716b762e865a5b460be2117bb5ed}
+
+\begin{DoxyCompactList}\small\item\em Protected common method used to perform byte-\/swapping on buffers. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_rt_api_a61fd2ec8b7bb72580bcf0233fd150f5f}{format\+Bytes} (\hyperlink{_rt_audio_8h_aafca92882d25915560018873221e44b8}{Rt\+Audio\+Format} format)\hypertarget{class_rt_api_a61fd2ec8b7bb72580bcf0233fd150f5f}{}\label{class_rt_api_a61fd2ec8b7bb72580bcf0233fd150f5f}
+
+\begin{DoxyCompactList}\small\item\em Protected common method that returns the number of bytes for a given format. \end{DoxyCompactList}\item 
+void \hyperlink{class_rt_api_af06289f7963ccc23dcd64eab911b26cd}{set\+Convert\+Info} (Stream\+Mode mode, unsigned int first\+Channel)\hypertarget{class_rt_api_af06289f7963ccc23dcd64eab911b26cd}{}\label{class_rt_api_af06289f7963ccc23dcd64eab911b26cd}
+
+\begin{DoxyCompactList}\small\item\em Protected common method that sets up the parameters for buffer conversion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostringstream {\bfseries error\+Stream\+\_\+}\hypertarget{class_rt_api_a3498df7d2f954d691d52c75f29dd8873}{}\label{class_rt_api_a3498df7d2f954d691d52c75f29dd8873}
+
+\item 
+std\+::string {\bfseries error\+Text\+\_\+}\hypertarget{class_rt_api_ab512557e93839a7cbb997160b08d3c18}{}\label{class_rt_api_ab512557e93839a7cbb997160b08d3c18}
+
+\item 
+bool {\bfseries show\+Warnings\+\_\+}\hypertarget{class_rt_api_aa9142cb3f4df970af4ee37fedb2f16b1}{}\label{class_rt_api_aa9142cb3f4df970af4ee37fedb2f16b1}
+
+\item 
+\hyperlink{struct_rt_api_1_1_rt_api_stream}{Rt\+Api\+Stream} {\bfseries stream\+\_\+}\hypertarget{class_rt_api_a818637ca9005b0270d56eaaea4697b34}{}\label{class_rt_api_a818637ca9005b0270d56eaaea4697b34}
+
+\item 
+bool {\bfseries first\+Error\+Occurred\+\_\+}\hypertarget{class_rt_api_a27b79744725ac8f8f56d2de8868fa242}{}\label{class_rt_api_a27b79744725ac8f8f56d2de8868fa242}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned int {\bfseries M\+A\+X\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+ES} = 14\hypertarget{class_rt_api_a59917a16adcd5eb468dd88d4c5b8c289}{}\label{class_rt_api_a59917a16adcd5eb468dd88d4c5b8c289}
+
+\item 
+static const unsigned int {\bfseries S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+ES} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Rt\+Api@{Rt\+Api}!convert\+Buffer@{convert\+Buffer}}
+\index{convert\+Buffer@{convert\+Buffer}!Rt\+Api@{Rt\+Api}}
+\subsubsection[{convert\+Buffer(char $\ast$out\+Buffer, char $\ast$in\+Buffer, Convert\+Info \&info)}]{\setlength{\rightskip}{0pt plus 5cm}void Rt\+Api\+::convert\+Buffer (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{out\+Buffer, }
+\item[{char $\ast$}]{in\+Buffer, }
+\item[{{\bf Convert\+Info} \&}]{info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_rt_api_a85ed0a3827faddf0c796869e72800850}{}\label{class_rt_api_a85ed0a3827faddf0c796869e72800850}
+Protected method used to perform format, channel number, and/or interleaving conversions between the user and device buffers. \index{Rt\+Api@{Rt\+Api}!probe\+Device\+Open@{probe\+Device\+Open}}
+\index{probe\+Device\+Open@{probe\+Device\+Open}!Rt\+Api@{Rt\+Api}}
+\subsubsection[{probe\+Device\+Open(unsigned int device, Stream\+Mode mode, unsigned int channels, unsigned int first\+Channel, unsigned int sample\+Rate, Rt\+Audio\+Format format, unsigned int $\ast$buffer\+Size, Rt\+Audio\+::\+Stream\+Options $\ast$options)}]{\setlength{\rightskip}{0pt plus 5cm}bool Rt\+Api\+::probe\+Device\+Open (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{device, }
+\item[{Stream\+Mode}]{mode, }
+\item[{unsigned int}]{channels, }
+\item[{unsigned int}]{first\+Channel, }
+\item[{unsigned int}]{sample\+Rate, }
+\item[{{\bf Rt\+Audio\+Format}}]{format, }
+\item[{unsigned int $\ast$}]{buffer\+Size, }
+\item[{{\bf Rt\+Audio\+::\+Stream\+Options} $\ast$}]{options}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{class_rt_api_a7cb2af485df310d803e7a35d3e4a2c1b}{}\label{class_rt_api_a7cb2af485df310d803e7a35d3e4a2c1b}
+Protected, api-\/specific method that attempts to open a device with the given parameters. This function M\+U\+ST be implemented by all subclasses. If an error is encountered during the probe, a \char`\"{}warning\char`\"{} message is reported and F\+A\+I\+L\+U\+RE is returned. A successful probe is indicated by a return value of S\+U\+C\+C\+E\+SS. \index{Rt\+Api@{Rt\+Api}!verify\+Stream@{verify\+Stream}}
+\index{verify\+Stream@{verify\+Stream}!Rt\+Api@{Rt\+Api}}
+\subsubsection[{verify\+Stream(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Rt\+Api\+::verify\+Stream (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_rt_api_acb0a053f68f082bb0f7ed4d056be1ea6}{}\label{class_rt_api_acb0a053f68f082bb0f7ed4d056be1ea6}
+Protected common method that throws an \hyperlink{class_rt_audio_error}{Rt\+Audio\+Error} (type = I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE) if a stream is not open. 
+
+\subsection{Member Data Documentation}
+\index{Rt\+Api@{Rt\+Api}!S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+ES@{S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+ES}}
+\index{S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+ES@{S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+ES}!Rt\+Api@{Rt\+Api}}
+\subsubsection[{S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+ES}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int Rt\+Api\+::\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+ES\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{class_rt_api_a84f89655b9f487005d10929ff9453ad2}{}\label{class_rt_api_a84f89655b9f487005d10929ff9453ad2}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  4000, 5512, 8000, 9600, 11025, 16000, 22050,
+  32000, 44100, 48000, 88200, 96000, 176400, 192000
+\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/rtaudio/\hyperlink{_rt_audio_8h}{Rt\+Audio.\+h}\item 
+include/rtaudio/Rt\+Audio.\+cpp\end{DoxyCompactItemize}

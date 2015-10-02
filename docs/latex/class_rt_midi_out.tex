@@ -1,0 +1,160 @@
+\hypertarget{class_rt_midi_out}{}\section{Rt\+Midi\+Out Class Reference}
+\label{class_rt_midi_out}\index{Rt\+Midi\+Out@{Rt\+Midi\+Out}}
+
+
+A realtime M\+I\+DI output class.  
+
+
+
+
+{\ttfamily \#include $<$Rt\+Midi.\+h$>$}
+
+Inheritance diagram for Rt\+Midi\+Out\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rt_midi_out}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rt_midi_out_a2940966e36b5479fbbf82c07424318cc}{Rt\+Midi\+Out} (\hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406}{Rt\+Midi\+::\+Api} api=\hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a4a4d9f7a38a082d6b0d5dd2b5de94ab9}{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}, const std\+::string client\+Name=std\+::string(\char`\"{}Rt\+Midi Output Client\char`\"{}))
+\begin{DoxyCompactList}\small\item\em Default constructor that allows an optional client name. \end{DoxyCompactList}\item 
+\hyperlink{class_rt_midi_out_afdc37ccd60d7a31b3970da7a1d423881}{$\sim$\+Rt\+Midi\+Out} (void)  throw ()\hypertarget{class_rt_midi_out_afdc37ccd60d7a31b3970da7a1d423881}{}\label{class_rt_midi_out_afdc37ccd60d7a31b3970da7a1d423881}
+
+\begin{DoxyCompactList}\small\item\em The destructor closes any open M\+I\+DI connections. \end{DoxyCompactList}\item 
+\hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406}{Rt\+Midi\+::\+Api} \hyperlink{class_rt_midi_out_a532b5712e305bd8afb65a3ad14138e0f}{get\+Current\+Api} (void)  throw ()\hypertarget{class_rt_midi_out_a532b5712e305bd8afb65a3ad14138e0f}{}\label{class_rt_midi_out_a532b5712e305bd8afb65a3ad14138e0f}
+
+\begin{DoxyCompactList}\small\item\em Returns the M\+I\+DI A\+PI specifier for the current instance of \hyperlink{class_rt_midi_out}{Rt\+Midi\+Out}. \end{DoxyCompactList}\item 
+void \hyperlink{class_rt_midi_out_a1b280d67317cd473a8816aeb2fe6c186}{open\+Port} (unsigned int port\+Number=0, const std\+::string port\+Name=std\+::string(\char`\"{}Rt\+Midi Output\char`\"{}))
+\begin{DoxyCompactList}\small\item\em Open a M\+I\+DI output connection. \end{DoxyCompactList}\item 
+void \hyperlink{class_rt_midi_out_a5a28d1ba9e002fd07a317d3a257d87e8}{close\+Port} (void)\hypertarget{class_rt_midi_out_a5a28d1ba9e002fd07a317d3a257d87e8}{}\label{class_rt_midi_out_a5a28d1ba9e002fd07a317d3a257d87e8}
+
+\begin{DoxyCompactList}\small\item\em Close an open M\+I\+DI connection (if one exists). \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_rt_midi_out_afe59ea775fb231ac19dab97bb7f5aa7d}{is\+Port\+Open} () const \hypertarget{class_rt_midi_out_afe59ea775fb231ac19dab97bb7f5aa7d}{}\label{class_rt_midi_out_afe59ea775fb231ac19dab97bb7f5aa7d}
+
+\begin{DoxyCompactList}\small\item\em Returns true if a port is open and false if not. \end{DoxyCompactList}\item 
+void \hyperlink{class_rt_midi_out_a47068e1c076d91fd89587c0ccdeddc7a}{open\+Virtual\+Port} (const std\+::string port\+Name=std\+::string(\char`\"{}Rt\+Midi Output\char`\"{}))
+\begin{DoxyCompactList}\small\item\em Create a virtual output port, with optional name, to allow software connections (OS X, J\+A\+CK and A\+L\+SA only). \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_rt_midi_out_a0c4d662e1c398ddf35a2dbaf66f50976}{get\+Port\+Count} (void)\hypertarget{class_rt_midi_out_a0c4d662e1c398ddf35a2dbaf66f50976}{}\label{class_rt_midi_out_a0c4d662e1c398ddf35a2dbaf66f50976}
+
+\begin{DoxyCompactList}\small\item\em Return the number of available M\+I\+DI output ports. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_rt_midi_out_acc4ae0ab71a49ae7629075d5a9cd837c}{get\+Port\+Name} (unsigned int port\+Number=0)
+\begin{DoxyCompactList}\small\item\em Return a string identifier for the specified M\+I\+DI port type and number. \end{DoxyCompactList}\item 
+void \hyperlink{class_rt_midi_out_a0bd8972ef8ac4e8d37ccc4b5d51c2eb3}{send\+Message} (std\+::vector$<$ unsigned char $>$ $\ast$message)
+\begin{DoxyCompactList}\small\item\em Immediately send a single message out an open M\+I\+DI output port. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_rt_midi_out_a91a4571214f7b033312cc6cb661d3253}{set\+Error\+Callback} (\hyperlink{_rt_midi_8h_a57641d3490f722c3efb9ee1c640e36bb}{Rt\+Midi\+Error\+Callback} error\+Callback=N\+U\+LL, void $\ast$user\+Data=0)
+\begin{DoxyCompactList}\small\item\em Set an error callback function to be invoked when an error has occured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries open\+Midi\+Api} (\hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406}{Rt\+Midi\+::\+Api} api, const std\+::string client\+Name)\hypertarget{class_rt_midi_out_ad70b1dbfd0d1a131065fbbdc569f93ba}{}\label{class_rt_midi_out_ad70b1dbfd0d1a131065fbbdc569f93ba}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A realtime M\+I\+DI output class. 
+
+This class provides a common, platform-\/independent A\+PI for M\+I\+DI output. It allows one to probe available M\+I\+DI output ports, to connect to one such port, and to send M\+I\+DI bytes immediately over the connection. Create multiple instances of this class to connect to more than one M\+I\+DI device at the same time. With the O\+S-\/X, Linux A\+L\+SA and J\+A\+CK M\+I\+DI A\+P\+Is, it is also possible to open a virtual port to which other M\+I\+DI software clients can connect.
+
+by Gary P. Scavone, 2003-\/2014. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Rt\+Midi\+Out@{Rt\+Midi\+Out}!Rt\+Midi\+Out@{Rt\+Midi\+Out}}
+\index{Rt\+Midi\+Out@{Rt\+Midi\+Out}!Rt\+Midi\+Out@{Rt\+Midi\+Out}}
+\subsubsection[{Rt\+Midi\+Out(\+Rt\+Midi\+::\+Api api=\+U\+N\+S\+P\+E\+C\+I\+F\+I\+E\+D, const std\+::string client\+Name=std\+::string(""Rt\+Midi Output Client""))}]{\setlength{\rightskip}{0pt plus 5cm}Rt\+Midi\+Out\+::\+Rt\+Midi\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Rt\+Midi\+::\+Api}}]{api = {\ttfamily {\bf U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}}, }
+\item[{const std\+::string}]{client\+Name = {\ttfamily std\+:\+:string(~\char`\"{}RtMidi~Output~Client\char`\"{})}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_rt_midi_out_a2940966e36b5479fbbf82c07424318cc}{}\label{class_rt_midi_out_a2940966e36b5479fbbf82c07424318cc}
+
+
+Default constructor that allows an optional client name. 
+
+An exception will be thrown if a M\+I\+DI system initialization error occurs.
+
+If no A\+PI argument is specified and multiple A\+PI support has been compiled, the default order of use is A\+L\+SA, J\+A\+CK (Linux) and C\+O\+RE, J\+A\+CK (O\+S-\/X). 
+
+\subsection{Member Function Documentation}
+\index{Rt\+Midi\+Out@{Rt\+Midi\+Out}!get\+Port\+Name@{get\+Port\+Name}}
+\index{get\+Port\+Name@{get\+Port\+Name}!Rt\+Midi\+Out@{Rt\+Midi\+Out}}
+\subsubsection[{get\+Port\+Name(unsigned int port\+Number=0)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Rt\+Midi\+Out\+::get\+Port\+Name (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{port\+Number = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_rt_midi_out_acc4ae0ab71a49ae7629075d5a9cd837c}{}\label{class_rt_midi_out_acc4ae0ab71a49ae7629075d5a9cd837c}
+
+
+Return a string identifier for the specified M\+I\+DI port type and number. 
+
+An empty string is returned if an invalid port specifier is provided. 
+
+Implements \hyperlink{class_rt_midi_a799e2b9f4df39b298518f2b394db3391}{Rt\+Midi}.
+
+\index{Rt\+Midi\+Out@{Rt\+Midi\+Out}!open\+Port@{open\+Port}}
+\index{open\+Port@{open\+Port}!Rt\+Midi\+Out@{Rt\+Midi\+Out}}
+\subsubsection[{open\+Port(unsigned int port\+Number=0, const std\+::string port\+Name=std\+::string(""Rt\+Midi Output""))}]{\setlength{\rightskip}{0pt plus 5cm}void Rt\+Midi\+Out\+::open\+Port (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{port\+Number = {\ttfamily 0}, }
+\item[{const std\+::string}]{port\+Name = {\ttfamily std\+:\+:string(~\char`\"{}RtMidi~Output\char`\"{}~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_rt_midi_out_a1b280d67317cd473a8816aeb2fe6c186}{}\label{class_rt_midi_out_a1b280d67317cd473a8816aeb2fe6c186}
+
+
+Open a M\+I\+DI output connection. 
+
+An optional port number greater than 0 can be specified. Otherwise, the default or first port found is opened. An exception is thrown if an error occurs while attempting to make the port connection. 
+
+Implements \hyperlink{class_rt_midi_ad9e30a89638f93193cb40edebaa536f5}{Rt\+Midi}.
+
+\index{Rt\+Midi\+Out@{Rt\+Midi\+Out}!open\+Virtual\+Port@{open\+Virtual\+Port}}
+\index{open\+Virtual\+Port@{open\+Virtual\+Port}!Rt\+Midi\+Out@{Rt\+Midi\+Out}}
+\subsubsection[{open\+Virtual\+Port(const std\+::string port\+Name=std\+::string(""Rt\+Midi Output""))}]{\setlength{\rightskip}{0pt plus 5cm}void Rt\+Midi\+Out\+::open\+Virtual\+Port (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{port\+Name = {\ttfamily std\+:\+:string(~\char`\"{}RtMidi~Output\char`\"{}~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_rt_midi_out_a47068e1c076d91fd89587c0ccdeddc7a}{}\label{class_rt_midi_out_a47068e1c076d91fd89587c0ccdeddc7a}
+
+
+Create a virtual output port, with optional name, to allow software connections (OS X, J\+A\+CK and A\+L\+SA only). 
+
+This function creates a virtual M\+I\+DI output port to which other software applications can connect. This type of functionality is currently only supported by the Macintosh O\+S-\/X, Linux A\+L\+SA and J\+A\+CK A\+P\+Is (the function does nothing with the other A\+P\+Is). An exception is thrown if an error occurs while attempting to create the virtual port. 
+
+Implements \hyperlink{class_rt_midi_a9200cde4f5337c0bc421d20bd4fcf654}{Rt\+Midi}.
+
+\index{Rt\+Midi\+Out@{Rt\+Midi\+Out}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!Rt\+Midi\+Out@{Rt\+Midi\+Out}}
+\subsubsection[{send\+Message(std\+::vector$<$ unsigned char $>$ $\ast$message)}]{\setlength{\rightskip}{0pt plus 5cm}void Rt\+Midi\+Out\+::send\+Message (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ unsigned char $>$ $\ast$}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_rt_midi_out_a0bd8972ef8ac4e8d37ccc4b5d51c2eb3}{}\label{class_rt_midi_out_a0bd8972ef8ac4e8d37ccc4b5d51c2eb3}
+
+
+Immediately send a single message out an open M\+I\+DI output port. 
+
+An exception is thrown if an error occurs during output or an output connection was not previously established. \index{Rt\+Midi\+Out@{Rt\+Midi\+Out}!set\+Error\+Callback@{set\+Error\+Callback}}
+\index{set\+Error\+Callback@{set\+Error\+Callback}!Rt\+Midi\+Out@{Rt\+Midi\+Out}}
+\subsubsection[{set\+Error\+Callback(\+Rt\+Midi\+Error\+Callback error\+Callback=\+N\+U\+L\+L, void $\ast$user\+Data=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Rt\+Midi\+Out\+::set\+Error\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf Rt\+Midi\+Error\+Callback}}]{error\+Callback = {\ttfamily NULL}, }
+\item[{void $\ast$}]{user\+Data = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_rt_midi_out_a91a4571214f7b033312cc6cb661d3253}{}\label{class_rt_midi_out_a91a4571214f7b033312cc6cb661d3253}
+
+
+Set an error callback function to be invoked when an error has occured. 
+
+The callback function will be called whenever an error has occured. It is best to set the error callback function before opening a port. 
+
+Implements \hyperlink{class_rt_midi_aa6d6f2e0d06c64268c8898aa15f3a5df}{Rt\+Midi}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/rtmidi/\hyperlink{_rt_midi_8h}{Rt\+Midi.\+h}\item 
+include/rtmidi/Rt\+Midi.\+cpp\end{DoxyCompactItemize}

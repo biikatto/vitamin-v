@@ -1,0 +1,147 @@
+\hypertarget{class_rt_midi}{}\section{Rt\+Midi Class Reference}
+\label{class_rt_midi}\index{Rt\+Midi@{Rt\+Midi}}
+
+
+An abstract base class for realtime M\+I\+DI input/output.  
+
+
+
+
+{\ttfamily \#include $<$Rt\+Midi.\+h$>$}
+
+Inheritance diagram for Rt\+Midi\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rt_midi}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406}{Api} \{ \\*
+\hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a4a4d9f7a38a082d6b0d5dd2b5de94ab9}{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}, 
+\hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a3f41293f89467641484fbd54c4530908}{M\+A\+C\+O\+S\+X\+\_\+\+C\+O\+RE}, 
+\hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a20c691b24844d3ab5dbf882123235df2}{L\+I\+N\+U\+X\+\_\+\+A\+L\+SA}, 
+\hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a1f59daf3120f47c0ae3891773112ddfa}{U\+N\+I\+X\+\_\+\+J\+A\+CK}, 
+\\*
+\hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a647868cb4ed37f517bf185a7f41cb70f}{W\+I\+N\+D\+O\+W\+S\+\_\+\+MM}, 
+\hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a54dba406ab358492005ce2b966a2d959}{R\+T\+M\+I\+D\+I\+\_\+\+D\+U\+M\+MY}
+ \}\begin{DoxyCompactList}\small\item\em M\+I\+DI A\+PI specifier arguments. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_rt_midi_ad9e30a89638f93193cb40edebaa536f5}{open\+Port} (unsigned int port\+Number=0, const std\+::string port\+Name=std\+::string(\char`\"{}Rt\+Midi\char`\"{}))=0\hypertarget{class_rt_midi_ad9e30a89638f93193cb40edebaa536f5}{}\label{class_rt_midi_ad9e30a89638f93193cb40edebaa536f5}
+
+\begin{DoxyCompactList}\small\item\em Pure virtual \hyperlink{class_rt_midi_ad9e30a89638f93193cb40edebaa536f5}{open\+Port()} function. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_rt_midi_a9200cde4f5337c0bc421d20bd4fcf654}{open\+Virtual\+Port} (const std\+::string port\+Name=std\+::string(\char`\"{}Rt\+Midi\char`\"{}))=0\hypertarget{class_rt_midi_a9200cde4f5337c0bc421d20bd4fcf654}{}\label{class_rt_midi_a9200cde4f5337c0bc421d20bd4fcf654}
+
+\begin{DoxyCompactList}\small\item\em Pure virtual \hyperlink{class_rt_midi_a9200cde4f5337c0bc421d20bd4fcf654}{open\+Virtual\+Port()} function. \end{DoxyCompactList}\item 
+virtual unsigned int \hyperlink{class_rt_midi_a9a49ef73a1e6007444019a7ae095e195}{get\+Port\+Count} ()=0\hypertarget{class_rt_midi_a9a49ef73a1e6007444019a7ae095e195}{}\label{class_rt_midi_a9a49ef73a1e6007444019a7ae095e195}
+
+\begin{DoxyCompactList}\small\item\em Pure virtual \hyperlink{class_rt_midi_a9a49ef73a1e6007444019a7ae095e195}{get\+Port\+Count()} function. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{class_rt_midi_a799e2b9f4df39b298518f2b394db3391}{get\+Port\+Name} (unsigned int port\+Number=0)=0\hypertarget{class_rt_midi_a799e2b9f4df39b298518f2b394db3391}{}\label{class_rt_midi_a799e2b9f4df39b298518f2b394db3391}
+
+\begin{DoxyCompactList}\small\item\em Pure virtual \hyperlink{class_rt_midi_a799e2b9f4df39b298518f2b394db3391}{get\+Port\+Name()} function. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_rt_midi_a36125c4fa16550345b57f4a4927f5b4a}{close\+Port} (void)=0\hypertarget{class_rt_midi_a36125c4fa16550345b57f4a4927f5b4a}{}\label{class_rt_midi_a36125c4fa16550345b57f4a4927f5b4a}
+
+\begin{DoxyCompactList}\small\item\em Pure virtual \hyperlink{class_rt_midi_a36125c4fa16550345b57f4a4927f5b4a}{close\+Port()} function. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_rt_midi_acb31c096d4911f29ce860e39a544e983}{is\+Port\+Open} (void) const  =0\hypertarget{class_rt_midi_acb31c096d4911f29ce860e39a544e983}{}\label{class_rt_midi_acb31c096d4911f29ce860e39a544e983}
+
+\begin{DoxyCompactList}\small\item\em Returns true if a port is open and false if not. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_rt_midi_aa6d6f2e0d06c64268c8898aa15f3a5df}{set\+Error\+Callback} (\hyperlink{_rt_midi_8h_a57641d3490f722c3efb9ee1c640e36bb}{Rt\+Midi\+Error\+Callback} error\+Callback=N\+U\+LL, void $\ast$user\+Data=0)=0
+\begin{DoxyCompactList}\small\item\em Set an error callback function to be invoked when an error has occured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \hyperlink{class_rt_midi_a02abb166b49d2ab3f1cc52e64a192004}{get\+Version} (void)  throw ()\hypertarget{class_rt_midi_a02abb166b49d2ab3f1cc52e64a192004}{}\label{class_rt_midi_a02abb166b49d2ab3f1cc52e64a192004}
+
+\begin{DoxyCompactList}\small\item\em A static function to determine the current \hyperlink{class_rt_midi}{Rt\+Midi} version. \end{DoxyCompactList}\item 
+static void \hyperlink{class_rt_midi_a39204d17dea25683456b49db648bfb8b}{get\+Compiled\+Api} (std\+::vector$<$ \hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406}{Rt\+Midi\+::\+Api} $>$ \&apis)  throw ()
+\begin{DoxyCompactList}\small\item\em A static function to determine the available compiled M\+I\+DI A\+P\+Is. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_midi_api}{Midi\+Api} $\ast$ {\bfseries rtapi\+\_\+}\hypertarget{class_rt_midi_ae5dad4d720ff6912b819ca608d2c9cd6}{}\label{class_rt_midi_ae5dad4d720ff6912b819ca608d2c9cd6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract base class for realtime M\+I\+DI input/output. 
+
+This class implements some common functionality for the realtime M\+I\+DI input/output subclasses \hyperlink{class_rt_midi_in}{Rt\+Midi\+In} and \hyperlink{class_rt_midi_out}{Rt\+Midi\+Out}.
+
+\hyperlink{class_rt_midi}{Rt\+Midi} W\+WW site\+: \href{http://music.mcgill.ca/~gary/rtmidi/}{\tt http\+://music.\+mcgill.\+ca/$\sim$gary/rtmidi/}
+
+\hyperlink{class_rt_midi}{Rt\+Midi}\+: realtime M\+I\+DI i/o C++ classes Copyright (c) 2003-\/2014 Gary P. Scavone
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+Any person wishing to distribute modifications to the Software is asked to send the modifications to the original developer so that they can be incorporated into the canonical version. This is, however, not a binding provision of this license.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE. 
+
+\subsection{Member Enumeration Documentation}
+\index{Rt\+Midi@{Rt\+Midi}!Api@{Api}}
+\index{Api@{Api}!Rt\+Midi@{Rt\+Midi}}
+\subsubsection[{Api}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Rt\+Midi\+::\+Api}}\hypertarget{class_rt_midi_aac66af04a85fe5c5f07c360574a19406}{}\label{class_rt_midi_aac66af04a85fe5c5f07c360574a19406}
+
+
+M\+I\+DI A\+PI specifier arguments. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}!Rt\+Midi@{Rt\+Midi}}\index{Rt\+Midi@{Rt\+Midi}!U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}}\item[{\em 
+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED\hypertarget{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a4a4d9f7a38a082d6b0d5dd2b5de94ab9}{}\label{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a4a4d9f7a38a082d6b0d5dd2b5de94ab9}
+}]Search for a working compiled A\+PI. \index{M\+A\+C\+O\+S\+X\+\_\+\+C\+O\+RE@{M\+A\+C\+O\+S\+X\+\_\+\+C\+O\+RE}!Rt\+Midi@{Rt\+Midi}}\index{Rt\+Midi@{Rt\+Midi}!M\+A\+C\+O\+S\+X\+\_\+\+C\+O\+RE@{M\+A\+C\+O\+S\+X\+\_\+\+C\+O\+RE}}\item[{\em 
+M\+A\+C\+O\+S\+X\+\_\+\+C\+O\+RE\hypertarget{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a3f41293f89467641484fbd54c4530908}{}\label{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a3f41293f89467641484fbd54c4530908}
+}]Macintosh O\+S-\/X Core Midi A\+PI. \index{L\+I\+N\+U\+X\+\_\+\+A\+L\+SA@{L\+I\+N\+U\+X\+\_\+\+A\+L\+SA}!Rt\+Midi@{Rt\+Midi}}\index{Rt\+Midi@{Rt\+Midi}!L\+I\+N\+U\+X\+\_\+\+A\+L\+SA@{L\+I\+N\+U\+X\+\_\+\+A\+L\+SA}}\item[{\em 
+L\+I\+N\+U\+X\+\_\+\+A\+L\+SA\hypertarget{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a20c691b24844d3ab5dbf882123235df2}{}\label{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a20c691b24844d3ab5dbf882123235df2}
+}]The Advanced Linux Sound Architecture A\+PI. \index{U\+N\+I\+X\+\_\+\+J\+A\+CK@{U\+N\+I\+X\+\_\+\+J\+A\+CK}!Rt\+Midi@{Rt\+Midi}}\index{Rt\+Midi@{Rt\+Midi}!U\+N\+I\+X\+\_\+\+J\+A\+CK@{U\+N\+I\+X\+\_\+\+J\+A\+CK}}\item[{\em 
+U\+N\+I\+X\+\_\+\+J\+A\+CK\hypertarget{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a1f59daf3120f47c0ae3891773112ddfa}{}\label{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a1f59daf3120f47c0ae3891773112ddfa}
+}]The J\+A\+CK Low-\/\+Latency M\+I\+DI Server A\+PI. \index{W\+I\+N\+D\+O\+W\+S\+\_\+\+MM@{W\+I\+N\+D\+O\+W\+S\+\_\+\+MM}!Rt\+Midi@{Rt\+Midi}}\index{Rt\+Midi@{Rt\+Midi}!W\+I\+N\+D\+O\+W\+S\+\_\+\+MM@{W\+I\+N\+D\+O\+W\+S\+\_\+\+MM}}\item[{\em 
+W\+I\+N\+D\+O\+W\+S\+\_\+\+MM\hypertarget{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a647868cb4ed37f517bf185a7f41cb70f}{}\label{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a647868cb4ed37f517bf185a7f41cb70f}
+}]The Microsoft Multimedia M\+I\+DI A\+PI. \index{R\+T\+M\+I\+D\+I\+\_\+\+D\+U\+M\+MY@{R\+T\+M\+I\+D\+I\+\_\+\+D\+U\+M\+MY}!Rt\+Midi@{Rt\+Midi}}\index{Rt\+Midi@{Rt\+Midi}!R\+T\+M\+I\+D\+I\+\_\+\+D\+U\+M\+MY@{R\+T\+M\+I\+D\+I\+\_\+\+D\+U\+M\+MY}}\item[{\em 
+R\+T\+M\+I\+D\+I\+\_\+\+D\+U\+M\+MY\hypertarget{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a54dba406ab358492005ce2b966a2d959}{}\label{class_rt_midi_aac66af04a85fe5c5f07c360574a19406a54dba406ab358492005ce2b966a2d959}
+}]A compilable but non-\/functional A\+PI. \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{Rt\+Midi@{Rt\+Midi}!get\+Compiled\+Api@{get\+Compiled\+Api}}
+\index{get\+Compiled\+Api@{get\+Compiled\+Api}!Rt\+Midi@{Rt\+Midi}}
+\subsubsection[{get\+Compiled\+Api(std\+::vector$<$ Rt\+Midi\+::\+Api $>$ \&apis)}]{\setlength{\rightskip}{0pt plus 5cm}void Rt\+Midi\+::get\+Compiled\+Api (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Rt\+Midi\+::\+Api} $>$ \&}]{apis}
+\end{DoxyParamCaption}
+) throw  ) \hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_rt_midi_a39204d17dea25683456b49db648bfb8b}{}\label{class_rt_midi_a39204d17dea25683456b49db648bfb8b}
+
+
+A static function to determine the available compiled M\+I\+DI A\+P\+Is. 
+
+The values returned in the std\+::vector can be compared against the enumerated list values. \hyperlink{class_note}{Note} that there can be more than one A\+PI compiled for certain operating systems. \index{Rt\+Midi@{Rt\+Midi}!set\+Error\+Callback@{set\+Error\+Callback}}
+\index{set\+Error\+Callback@{set\+Error\+Callback}!Rt\+Midi@{Rt\+Midi}}
+\subsubsection[{set\+Error\+Callback(\+Rt\+Midi\+Error\+Callback error\+Callback=\+N\+U\+L\+L, void $\ast$user\+Data=0)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Rt\+Midi\+::set\+Error\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf Rt\+Midi\+Error\+Callback}}]{error\+Callback = {\ttfamily NULL}, }
+\item[{void $\ast$}]{user\+Data = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_rt_midi_aa6d6f2e0d06c64268c8898aa15f3a5df}{}\label{class_rt_midi_aa6d6f2e0d06c64268c8898aa15f3a5df}
+
+
+Set an error callback function to be invoked when an error has occured. 
+
+The callback function will be called whenever an error has occured. It is best to set the error callback function before opening a port. 
+
+Implemented in \hyperlink{class_rt_midi_out_a91a4571214f7b033312cc6cb661d3253}{Rt\+Midi\+Out}, and \hyperlink{class_rt_midi_in_ad70189a24427b3169d81fcc69f6441e0}{Rt\+Midi\+In}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/rtmidi/\hyperlink{_rt_midi_8h}{Rt\+Midi.\+h}\item 
+include/rtmidi/Rt\+Midi.\+cpp\end{DoxyCompactItemize}

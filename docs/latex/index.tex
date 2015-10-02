@@ -1,0 +1,57 @@
+\hyperlink{class_rt_audio}{Rt\+Audio} is a set of C++ classes that provide a common A\+PI (Application Programming Interface) for realtime audio input/output across Linux, Macintosh O\+S-\/X and Windows operating systems. \hyperlink{class_rt_audio}{Rt\+Audio} significantly simplifies the process of interacting with computer audio hardware. It was designed with the following objectives\+:
+
+
+\begin{DoxyItemize}
+\item object-\/oriented C++ design 
+\item simple, common A\+PI across all supported platforms 
+\item only one source and one header file for easy inclusion in programming projects 
+\item allow simultaneous multi-\/api support 
+\item support dynamic connection of devices 
+\item provide extensive audio device parameter control 
+\item allow audio device capability probing 
+\item automatic internal conversion for data format, channel number compensation, (de)interleaving, and byte-\/swapping 
+\end{DoxyItemize}
+
+\hyperlink{class_rt_audio}{Rt\+Audio} incorporates the concept of audio streams, which represent audio output (playback) and/or input (recording). Available audio devices and their capabilities can be enumerated and then specified when opening a stream. Where applicable, multiple A\+PI support can be compiled and a particular A\+PI specified when creating an \hyperlink{class_rt_audio}{Rt\+Audio} instance. See the \hyperlink{tutorial.txt_apinotes}{A\+PI Notes} section for information specific to each of the supported audio A\+P\+Is.\hypertarget{index_whatsnew}{}\section{Latest Updates (\+Version 4.\+1.\+1)}\label{index_whatsnew}
+Changes in this release include\+:
+
+
+\begin{DoxyItemize}
+\item updates to W\+A\+S\+A\+PI A\+PI for Min\+GW compiling
+\item W\+A\+S\+A\+PI bug fixes for audio I\+N\+P\+UT mode (thanks to Marcus Tomlinson)
+\item Direct\+Sound bug fix for I\+N\+P\+UT mode
+\item Bug fixes in Core, Jack, A\+S\+IO and DS for internal draining in I\+N\+P\+UT mode
+\item updates to test programs for default device specifiers
+\item C\+Make buildfile update for W\+A\+S\+A\+PI
+\item new set\+Stream\+Time function
+\end{DoxyItemize}
+
+Changes in the previous 4.\+1.\+0 release included\+:
+
+
+\begin{DoxyItemize}
+\item Rt\+Error class renamed \hyperlink{class_rt_audio_error}{Rt\+Audio\+Error} and embedded in \hyperlink{_rt_audio_8h}{Rt\+Audio.\+h} (Rt\+Error.\+h deleted)
+\item new support for the Windows W\+A\+S\+A\+PI A\+PI (thanks to Marcus Tomlinson)
+\item C\+Make support (thanks to Berkus Decker)
+\item pulse audio update to support buffer\+Frames argument with audio input (thanks to Jonatan Wallmander)
+\item fixes for A\+L\+SA A\+PI to avoid high C\+PU usage during stops and to clear stale data before input (thanks to Pluto Hades)
+\item miscellaneous efficiency updates suggested by Martin Koegler
+\item bug fix for O\+S-\/X xrun reporting problem
+\item bug fix if error when opening a stream after closing a previously open stream
+\end{DoxyItemize}\hypertarget{index_download}{}\section{Download}\label{index_download}
+Latest Release (26 April 2014)\+: \href{http://www.music.mcgill.ca/~gary/rtaudio/release/rtaudio-4.1.1.tar.gz}{\tt Version 4.\+1.\+1}\hypertarget{index_documentation}{}\section{Documentation Links}\label{index_documentation}
+
+\begin{DoxyEnumerate}
+\item \hyperlink{errors}{Error Handling}
+\item \hyperlink{probe}{Probing Device Capabilities}
+\item \hyperlink{settings}{Device Settings}
+\item \hyperlink{playback}{Playback}
+\item \hyperlink{recording}{Recording}
+\item \hyperlink{duplex}{Duplex Mode}
+\item \hyperlink{tutorial.txt_multi}{Using Simultaneous Multiple A\+P\+Is}
+\item \hyperlink{tutorial.txt_compiling}{Compiling}
+\item \hyperlink{tutorial.txt_apinotes}{A\+PI Notes}
+\item \hyperlink{tutorial.txt_acknowledge}{Development \& Acknowledgements}
+\item \hyperlink{tutorial.txt_license}{License}
+\item \href{http://github.com/thestk/rtaudio}{\tt Rt\+Audio on Git\+Hub} 
+\end{DoxyEnumerate}

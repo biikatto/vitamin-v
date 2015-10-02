@@ -1,0 +1,65 @@
+Using \hyperlink{class_rt_audio}{Rt\+Audio} for audio input is almost identical to the way it is used for playback. Here\textquotesingle{}s the blocking playback example rewritten for recording\+:
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{_rt_audio_8h}{RtAudio.h}"}
+\textcolor{preprocessor}{#include <iostream>}
+\textcolor{preprocessor}{#include <cstdlib>}
+\textcolor{preprocessor}{#include <cstring>}
+
+\textcolor{keywordtype}{int} record( \textcolor{keywordtype}{void} *outputBuffer, \textcolor{keywordtype}{void} *inputBuffer, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nBufferFrames,
+         \textcolor{keywordtype}{double} streamTime, \hyperlink{_rt_audio_8h_a80e306d363583da3b0a1b65d9b57c806}{RtAudioStreamStatus} status, \textcolor{keywordtype}{void} *userData )
+\{
+  \textcolor{keywordflow}{if} ( status )
+    std::cout << \textcolor{stringliteral}{"Stream overflow detected!"} << std::endl;
+
+  \textcolor{comment}{// Do something with the data in the "inputBuffer" buffer.}
+
+  \textcolor{keywordflow}{return} 0;
+\}
+
+\textcolor{keywordtype}{int} main()
+\{
+  \hyperlink{class_rt_audio}{RtAudio} adc;
+  \textcolor{keywordflow}{if} ( adc.\hyperlink{class_rt_audio_a747ce2d73803641bbb66d6e78092aa1a}{getDeviceCount}() < 1 ) \{
+    std::cout << \textcolor{stringliteral}{"\(\backslash\)nNo audio devices found!\(\backslash\)n"};
+    exit( 0 );
+  \}
+
+  \hyperlink{struct_rt_audio_1_1_stream_parameters}{RtAudio::StreamParameters} parameters;
+  parameters.\hyperlink{struct_rt_audio_1_1_stream_parameters_ab3c72bcf3ef12149ae9a4fb597cc5489}{deviceId} = adc.\hyperlink{class_rt_audio_aad8b94edd3cd379ee300b125750ac6ce}{getDefaultInputDevice}();
+  parameters.\hyperlink{struct_rt_audio_1_1_stream_parameters_a88a10091b6e284e21235cc6f25332ebd}{nChannels} = 2;
+  parameters.\hyperlink{struct_rt_audio_1_1_stream_parameters_ad4b4503782653ec93c83328c46abe50c}{firstChannel} = 0;
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sampleRate = 44100;
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bufferFrames = 256; \textcolor{comment}{// 256 sample frames}
+
+  \textcolor{keywordflow}{try} \{
+    adc.\hyperlink{class_rt_audio_a6907539d2527775df778ebce32ef1e3b}{openStream}( NULL, &parameters, RTAUDIO\_SINT16,
+                    sampleRate, &bufferFrames, &record );
+    adc.\hyperlink{class_rt_audio_aec017a89629ccef66a90b60be22a2f80}{startStream}();
+  \}
+  \textcolor{keywordflow}{catch} ( \hyperlink{class_rt_audio_error}{RtAudioError}& e ) \{
+    e.\hyperlink{class_rt_audio_error_a0124bb90075cf3201865a0ea9b43a826}{printMessage}();
+    exit( 0 );
+  \}
+  
+  \textcolor{keywordtype}{char} input;
+  std::cout << \textcolor{stringliteral}{"\(\backslash\)nRecording ... press <enter> to quit.\(\backslash\)n"};
+  std::cin.get( input );
+
+  \textcolor{keywordflow}{try} \{
+    \textcolor{comment}{// Stop the stream}
+    adc.\hyperlink{class_rt_audio_af4c241ff86936ecc8108f0d9dfe3efdd}{stopStream}();
+  \}
+  \textcolor{keywordflow}{catch} (\hyperlink{class_rt_audio_error}{RtAudioError}& e) \{
+    e.\hyperlink{class_rt_audio_error_a0124bb90075cf3201865a0ea9b43a826}{printMessage}();
+  \}
+
+  \textcolor{keywordflow}{if} ( adc.\hyperlink{class_rt_audio_a3863e45ff81dbe97176de0ee7545917f}{isStreamOpen}() ) adc.\hyperlink{class_rt_audio_a90d599002ad32cf250a4cb866f2cc93a}{closeStream}();
+
+  \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+
+
+In this example, we pass the address of the stream parameter structure as the second argument of the \hyperlink{class_rt_audio_a6907539d2527775df778ebce32ef1e3b}{Rt\+Audio\+::open\+Stream()} function and pass a N\+U\+LL value for the output stream parameters. In this example, the {\itshape record()} callback function performs no specific operations. 

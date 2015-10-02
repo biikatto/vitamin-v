@@ -1,3 +1,6 @@
+/*! \class Pattern
+ *  \brief A pattern, which holds notes for one track.
+*/
 #ifndef ___Vitamin_Pattern__
 #define ___Vitamin_Pattern__
 #include <vector>
@@ -18,21 +21,20 @@ class Pattern{
     void clear();
     void clear_range(size_t begin, size_t end);
 
-    // Wrapper for underlying Note vector
     Note& operator[](std::size_t idx);
     const Note& operator[](std::size_t idx) const;
 
-    __wrap_iter<Note*> begin(){ return notes_.begin();};
-    __wrap_iter<Note*> end(){ return notes_.end();};
+    __wrap_iter<Note*> begin(){ return notes_.begin();}; /*!< Return an iterator pointing to the first Note in the pattern. */
+    __wrap_iter<Note*> end(){ return notes_.end();}; /*!< Return an iterator pointing to the past-the-end Note in the pattern. */
 
-    reverse_iterator<__wrap_iter<Note*> > rbegin(){ return notes_.rbegin();};
-    reverse_iterator<__wrap_iter<Note*> > rend(){ return notes_.rend();};
+    reverse_iterator<__wrap_iter<Note*> > rbegin(){ return notes_.rbegin();}; /*!< Return a reverse iterator pointing to the first Note in the reversed pattern. */
+    reverse_iterator<__wrap_iter<Note*> > rend(){ return notes_.rend();}; /*!< Return a reverse iterator pointing to the past-the-end Note in the reversed pattern. */
 
-    __wrap_iter<const Note*> cbegin(){ return notes_.cbegin();};
-    __wrap_iter<const Note*> cend(){ return notes_.cend();};
+    __wrap_iter<const Note*> cbegin(){ return notes_.cbegin();}; /*!< Return a const_iterator to the beginning. */
+    __wrap_iter<const Note*> cend(){ return notes_.cend();}; /*!< Return a const_iterator to the end. */
 
-    reverse_iterator<__wrap_iter<const Note*> > crbegin(){ return notes_.crbegin();};
-    reverse_iterator<__wrap_iter<const Note*> > crend(){ return notes_.crend();};
+    reverse_iterator<__wrap_iter<const Note*> > crbegin(){ return notes_.crbegin();}; /*!< Return a const_reverse_iterator to the beginning. */
+    reverse_iterator<__wrap_iter<const Note*> > crend(){ return notes_.crend();}; /*!< Return a const_reverse_iterator to the end. */
 
   private:
     unsigned int length_;

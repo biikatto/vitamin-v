@@ -1,0 +1,80 @@
+In this example, we provide a complete program that demonstrates the use of \hyperlink{class_rt_audio}{Rt\+Audio} for audio playback. Our program produces a two-\/channel sawtooth waveform for output.
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{_rt_audio_8h}{RtAudio.h}"}
+\textcolor{preprocessor}{#include <iostream>}
+\textcolor{preprocessor}{#include <cstdlib>}
+
+\textcolor{comment}{// Two-channel sawtooth wave generator.}
+\textcolor{keywordtype}{int} saw( \textcolor{keywordtype}{void} *outputBuffer, \textcolor{keywordtype}{void} *inputBuffer, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nBufferFrames,
+         \textcolor{keywordtype}{double} streamTime, \hyperlink{_rt_audio_8h_a80e306d363583da3b0a1b65d9b57c806}{RtAudioStreamStatus} status, \textcolor{keywordtype}{void} *userData )
+\{
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i, j;
+  \textcolor{keywordtype}{double} *buffer = (\textcolor{keywordtype}{double} *) outputBuffer;
+  \textcolor{keywordtype}{double} *lastValues = (\textcolor{keywordtype}{double} *) userData;
+
+  \textcolor{keywordflow}{if} ( status )
+    std::cout << \textcolor{stringliteral}{"Stream underflow detected!"} << std::endl;
+
+  \textcolor{comment}{// Write interleaved audio data.}
+  \textcolor{keywordflow}{for} ( i=0; i<nBufferFrames; i++ ) \{
+    \textcolor{keywordflow}{for} ( j=0; j<2; j++ ) \{
+      *buffer++ = lastValues[j];
+
+      lastValues[j] += 0.005 * (j+1+(j*0.1));
+      \textcolor{keywordflow}{if} ( lastValues[j] >= 1.0 ) lastValues[j] -= 2.0;
+    \}
+  \}
+
+  \textcolor{keywordflow}{return} 0;
+\}
+
+\textcolor{keywordtype}{int} main()
+\{
+  \hyperlink{class_rt_audio}{RtAudio} dac;
+  \textcolor{keywordflow}{if} ( dac.\hyperlink{class_rt_audio_a747ce2d73803641bbb66d6e78092aa1a}{getDeviceCount}() < 1 ) \{
+    std::cout << \textcolor{stringliteral}{"\(\backslash\)nNo audio devices found!\(\backslash\)n"};
+    exit( 0 );
+  \}
+
+  \hyperlink{struct_rt_audio_1_1_stream_parameters}{RtAudio::StreamParameters} parameters;
+  parameters.\hyperlink{struct_rt_audio_1_1_stream_parameters_ab3c72bcf3ef12149ae9a4fb597cc5489}{deviceId} = dac.\hyperlink{class_rt_audio_a3a3f3dbe13ea696b521e49cdaaa357bc}{getDefaultOutputDevice}();
+  parameters.\hyperlink{struct_rt_audio_1_1_stream_parameters_a88a10091b6e284e21235cc6f25332ebd}{nChannels} = 2;
+  parameters.\hyperlink{struct_rt_audio_1_1_stream_parameters_ad4b4503782653ec93c83328c46abe50c}{firstChannel} = 0;
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sampleRate = 44100;
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bufferFrames = 256; \textcolor{comment}{// 256 sample frames}
+  \textcolor{keywordtype}{double} data[2];
+
+  \textcolor{keywordflow}{try} \{
+    dac.\hyperlink{class_rt_audio_a6907539d2527775df778ebce32ef1e3b}{openStream}( &parameters, NULL, RTAUDIO\_FLOAT64,
+                    sampleRate, &bufferFrames, &saw, (\textcolor{keywordtype}{void} *)&data );
+    dac.\hyperlink{class_rt_audio_aec017a89629ccef66a90b60be22a2f80}{startStream}();
+  \}
+  \textcolor{keywordflow}{catch} ( \hyperlink{class_rt_audio_error}{RtAudioError}& e ) \{
+    e.\hyperlink{class_rt_audio_error_a0124bb90075cf3201865a0ea9b43a826}{printMessage}();
+    exit( 0 );
+  \}
+  
+  \textcolor{keywordtype}{char} input;
+  std::cout << \textcolor{stringliteral}{"\(\backslash\)nPlaying ... press <enter> to quit.\(\backslash\)n"};
+  std::cin.get( input );
+
+  \textcolor{keywordflow}{try} \{
+    \textcolor{comment}{// Stop the stream}
+    dac.\hyperlink{class_rt_audio_af4c241ff86936ecc8108f0d9dfe3efdd}{stopStream}();
+  \}
+  \textcolor{keywordflow}{catch} (\hyperlink{class_rt_audio_error}{RtAudioError}& e) \{
+    e.\hyperlink{class_rt_audio_error_a0124bb90075cf3201865a0ea9b43a826}{printMessage}();
+  \}
+
+  \textcolor{keywordflow}{if} ( dac.\hyperlink{class_rt_audio_a3863e45ff81dbe97176de0ee7545917f}{isStreamOpen}() ) dac.\hyperlink{class_rt_audio_a90d599002ad32cf250a4cb866f2cc93a}{closeStream}();
+
+  \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+
+
+We open the stream in exactly the same way as the previous example (except with a data format change) and specify the address of our callback function {\itshape \char`\"{}saw()\char`\"{}}. The callback function will automatically be invoked when the underlying audio system needs data for output. \hyperlink{class_note}{Note} that the callback function is called only when the stream is \char`\"{}running\char`\"{} (between calls to the \hyperlink{class_rt_audio_aec017a89629ccef66a90b60be22a2f80}{Rt\+Audio\+::start\+Stream()} and \hyperlink{class_rt_audio_af4c241ff86936ecc8108f0d9dfe3efdd}{Rt\+Audio\+::stop\+Stream()} functions). We can also pass a pointer value to the \hyperlink{class_rt_audio_a6907539d2527775df778ebce32ef1e3b}{Rt\+Audio\+::open\+Stream()} function that is made available in the callback function. In this way, it is possible to gain access to arbitrary data created in our {\itshape main()} function from within the globally defined callback function.
+
+In this example, we stop the stream with an explicit call to \hyperlink{class_rt_audio_af4c241ff86936ecc8108f0d9dfe3efdd}{Rt\+Audio\+::stop\+Stream()}. It is also possible to stop a stream by returning a non-\/zero value from the callback function. A return value of 1 will cause the stream to finish draining its internal buffers and then halt (equivalent to calling the \hyperlink{class_rt_audio_af4c241ff86936ecc8108f0d9dfe3efdd}{Rt\+Audio\+::stop\+Stream()} function). A return value of 2 will cause the stream to stop immediately (equivalent to calling the \hyperlink{class_rt_audio_ad0586b47cd6bb9591a80b4052815991f}{Rt\+Audio\+::abort\+Stream()} function). 

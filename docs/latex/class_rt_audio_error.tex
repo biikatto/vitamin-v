@@ -1,0 +1,113 @@
+\hypertarget{class_rt_audio_error}{}\section{Rt\+Audio\+Error Class Reference}
+\label{class_rt_audio_error}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}}
+
+
+Exception handling class for \hyperlink{class_rt_audio}{Rt\+Audio}.  
+
+
+
+
+{\ttfamily \#include $<$Rt\+Audio.\+h$>$}
+
+Inheritance diagram for Rt\+Audio\+Error\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rt_audio_error}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073}{Type} \{ \\*
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a2a65138d7bfc0d837e190d83be652002}{W\+A\+R\+N\+I\+NG}, 
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073addec546de239cbe31eaf957aa788077e}{D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG}, 
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a395c8f5ff5e196c148308afa1b17b573}{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}, 
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a57687b266b9bfa7fdc42d888f1f9d926}{N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND}, 
+\\*
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a08b0619b94eecdb8a3c3b090d8f6071f}{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE}, 
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a274eea66f86a3a1a0a700558ebbe5c6b}{M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073ab679b99ae82a7a0268c42171a590cd75}{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}, 
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a7df05d1bbec08e774640dd754616735e}{I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE}, 
+\\*
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a4cb0d171bff6c85a6041ed8f394214af}{D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073ae255cae361eab840707fe48630ce5a17}{S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a9c9821fc9ab25a12b97c588efe01a7ba}{T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR}
+ \}\begin{DoxyCompactList}\small\item\em Defined \hyperlink{class_rt_audio_error}{Rt\+Audio\+Error} types. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rt_audio_error_a35a8c66eacf2929631cc64b4d80cac2e}{Rt\+Audio\+Error} (const std\+::string \&message, \hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073}{Type} type=\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a395c8f5ff5e196c148308afa1b17b573}{Rt\+Audio\+Error\+::\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED})  throw ()\hypertarget{class_rt_audio_error_a35a8c66eacf2929631cc64b4d80cac2e}{}\label{class_rt_audio_error_a35a8c66eacf2929631cc64b4d80cac2e}
+
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_rt_audio_error_af2ea5c2851f6bb5abe3ac3e1c33a5a70}{$\sim$\+Rt\+Audio\+Error} (void)  throw ()\hypertarget{class_rt_audio_error_af2ea5c2851f6bb5abe3ac3e1c33a5a70}{}\label{class_rt_audio_error_af2ea5c2851f6bb5abe3ac3e1c33a5a70}
+
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_rt_audio_error_a0124bb90075cf3201865a0ea9b43a826}{print\+Message} (void) const   throw ()\hypertarget{class_rt_audio_error_a0124bb90075cf3201865a0ea9b43a826}{}\label{class_rt_audio_error_a0124bb90075cf3201865a0ea9b43a826}
+
+\begin{DoxyCompactList}\small\item\em Prints thrown error message to stderr. \end{DoxyCompactList}\item 
+virtual const \hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073}{Type} \& \hyperlink{class_rt_audio_error_a09d238f227d41990773e1142fc06b144}{get\+Type} (void) const   throw ()\hypertarget{class_rt_audio_error_a09d238f227d41990773e1142fc06b144}{}\label{class_rt_audio_error_a09d238f227d41990773e1142fc06b144}
+
+\begin{DoxyCompactList}\small\item\em Returns the thrown error message type. \end{DoxyCompactList}\item 
+virtual const std\+::string \& \hyperlink{class_rt_audio_error_af1e84bd3ebc86210a723d1839b4f9cbf}{get\+Message} (void) const   throw ()\hypertarget{class_rt_audio_error_af1e84bd3ebc86210a723d1839b4f9cbf}{}\label{class_rt_audio_error_af1e84bd3ebc86210a723d1839b4f9cbf}
+
+\begin{DoxyCompactList}\small\item\em Returns the thrown error message string. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \hyperlink{class_rt_audio_error_aa0a4ebf95bcd3c6a6b1125bd5ad889da}{what} (void) const   throw ()\hypertarget{class_rt_audio_error_aa0a4ebf95bcd3c6a6b1125bd5ad889da}{}\label{class_rt_audio_error_aa0a4ebf95bcd3c6a6b1125bd5ad889da}
+
+\begin{DoxyCompactList}\small\item\em Returns the thrown error message as a c-\/style string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries message\+\_\+}\hypertarget{class_rt_audio_error_a5d06eaff3db7c14db49084411b195f60}{}\label{class_rt_audio_error_a5d06eaff3db7c14db49084411b195f60}
+
+\item 
+\hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073}{Type} {\bfseries type\+\_\+}\hypertarget{class_rt_audio_error_ac0c3f1bca03feb57bbba1830aed0f6ad}{}\label{class_rt_audio_error_ac0c3f1bca03feb57bbba1830aed0f6ad}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Exception handling class for \hyperlink{class_rt_audio}{Rt\+Audio}. 
+
+The \hyperlink{class_rt_audio_error}{Rt\+Audio\+Error} class is quite simple but it does allow errors to be \char`\"{}caught\char`\"{} by \hyperlink{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073}{Rt\+Audio\+Error\+::\+Type}. See the \hyperlink{class_rt_audio}{Rt\+Audio} documentation to know which methods can throw an \hyperlink{class_rt_audio_error}{Rt\+Audio\+Error}. 
+
+\subsection{Member Enumeration Documentation}
+\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!Type@{Type}}
+\index{Type@{Type}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Rt\+Audio\+Error\+::\+Type}}\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073}
+
+
+Defined \hyperlink{class_rt_audio_error}{Rt\+Audio\+Error} types. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{W\+A\+R\+N\+I\+NG@{W\+A\+R\+N\+I\+NG}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!W\+A\+R\+N\+I\+NG@{W\+A\+R\+N\+I\+NG}}\item[{\em 
+W\+A\+R\+N\+I\+NG\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a2a65138d7bfc0d837e190d83be652002}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a2a65138d7bfc0d837e190d83be652002}
+}]A non-\/critical error. \index{D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG}}\item[{\em 
+D\+E\+B\+U\+G\+\_\+\+W\+A\+R\+N\+I\+NG\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073addec546de239cbe31eaf957aa788077e}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073addec546de239cbe31eaf957aa788077e}
+}]A non-\/critical error which might be useful for debugging. \index{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!U\+N\+S\+P\+E\+C\+I\+F\+I\+ED@{U\+N\+S\+P\+E\+C\+I\+F\+I\+ED}}\item[{\em 
+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a395c8f5ff5e196c148308afa1b17b573}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a395c8f5ff5e196c148308afa1b17b573}
+}]The default, unspecified error type. \index{N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND@{N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND@{N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND}}\item[{\em 
+N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+F\+O\+U\+ND\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a57687b266b9bfa7fdc42d888f1f9d926}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a57687b266b9bfa7fdc42d888f1f9d926}
+}]No devices found on system. \index{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a08b0619b94eecdb8a3c3b090d8f6071f}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a08b0619b94eecdb8a3c3b090d8f6071f}
+}]An invalid device ID was specified. \index{M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR@{M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR@{M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+M\+E\+M\+O\+R\+Y\+\_\+\+E\+R\+R\+OR\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a274eea66f86a3a1a0a700558ebbe5c6b}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a274eea66f86a3a1a0a700558ebbe5c6b}
+}]An error occured during memory allocation. \index{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073ab679b99ae82a7a0268c42171a590cd75}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073ab679b99ae82a7a0268c42171a590cd75}
+}]An invalid parameter was specified to a function. \index{I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+SE\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a7df05d1bbec08e774640dd754616735e}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a7df05d1bbec08e774640dd754616735e}
+}]The function was called incorrectly. \index{D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR@{D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR@{D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+D\+R\+I\+V\+E\+R\+\_\+\+E\+R\+R\+OR\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a4cb0d171bff6c85a6041ed8f394214af}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a4cb0d171bff6c85a6041ed8f394214af}
+}]A system driver error occured. \index{S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR@{S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR@{S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+S\+Y\+S\+T\+E\+M\+\_\+\+E\+R\+R\+OR\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073ae255cae361eab840707fe48630ce5a17}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073ae255cae361eab840707fe48630ce5a17}
+}]A system error occured. \index{T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR@{T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR}!Rt\+Audio\+Error@{Rt\+Audio\+Error}}\index{Rt\+Audio\+Error@{Rt\+Audio\+Error}!T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR@{T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+T\+H\+R\+E\+A\+D\+\_\+\+E\+R\+R\+OR\hypertarget{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a9c9821fc9ab25a12b97c588efe01a7ba}{}\label{class_rt_audio_error_a85bdee746d5ba80d655ac98ded21d073a9c9821fc9ab25a12b97c588efe01a7ba}
+}]A thread error occured. \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/rtaudio/\hyperlink{_rt_audio_8h}{Rt\+Audio.\+h}\end{DoxyCompactItemize}

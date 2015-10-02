@@ -1,0 +1,71 @@
+\hypertarget{class_midi_api}{}\section{Midi\+Api Class Reference}
+\label{class_midi_api}\index{Midi\+Api@{Midi\+Api}}
+Inheritance diagram for Midi\+Api\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_midi_api}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_rt_midi_aac66af04a85fe5c5f07c360574a19406}{Rt\+Midi\+::\+Api} {\bfseries get\+Current\+Api} (void)=0\hypertarget{class_midi_api_a9913ffc5863dbb4ac6d4e81d046c665a}{}\label{class_midi_api_a9913ffc5863dbb4ac6d4e81d046c665a}
+
+\item 
+virtual void {\bfseries open\+Port} (unsigned int port\+Number, const std\+::string port\+Name)=0\hypertarget{class_midi_api_a0c4a5ef7ab6ff7d223b96671422e352c}{}\label{class_midi_api_a0c4a5ef7ab6ff7d223b96671422e352c}
+
+\item 
+virtual void {\bfseries open\+Virtual\+Port} (const std\+::string port\+Name)=0\hypertarget{class_midi_api_a772dc26ec412c19facb71b85db2927fd}{}\label{class_midi_api_a772dc26ec412c19facb71b85db2927fd}
+
+\item 
+virtual void {\bfseries close\+Port} (void)=0\hypertarget{class_midi_api_a1410af774a6bcdf85726eb69b94bc918}{}\label{class_midi_api_a1410af774a6bcdf85726eb69b94bc918}
+
+\item 
+virtual unsigned int {\bfseries get\+Port\+Count} (void)=0\hypertarget{class_midi_api_a98661c935d597e8ba19ed266287868f5}{}\label{class_midi_api_a98661c935d597e8ba19ed266287868f5}
+
+\item 
+virtual std\+::string {\bfseries get\+Port\+Name} (unsigned int port\+Number)=0\hypertarget{class_midi_api_a317393a9094e7c2bf51337adbabe6a71}{}\label{class_midi_api_a317393a9094e7c2bf51337adbabe6a71}
+
+\item 
+bool {\bfseries is\+Port\+Open} () const \hypertarget{class_midi_api_ae0cd5322013cc8eddf05fe5d7bdc9314}{}\label{class_midi_api_ae0cd5322013cc8eddf05fe5d7bdc9314}
+
+\item 
+void {\bfseries set\+Error\+Callback} (\hyperlink{_rt_midi_8h_a57641d3490f722c3efb9ee1c640e36bb}{Rt\+Midi\+Error\+Callback} error\+Callback, void $\ast$user\+Data)\hypertarget{class_midi_api_a1c90ccc7153045c1059230295d9de8fc}{}\label{class_midi_api_a1c90ccc7153045c1059230295d9de8fc}
+
+\item 
+void \hyperlink{class_midi_api_a90114261efbce1a0e3d2a3dcf4459a15}{error} (\hyperlink{class_rt_midi_error_a741314057cec5fb8c743c12f284905ee}{Rt\+Midi\+Error\+::\+Type} type, std\+::string error\+String)\hypertarget{class_midi_api_a90114261efbce1a0e3d2a3dcf4459a15}{}\label{class_midi_api_a90114261efbce1a0e3d2a3dcf4459a15}
+
+\begin{DoxyCompactList}\small\item\em A basic error reporting function for \hyperlink{class_rt_midi}{Rt\+Midi} classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries initialize} (const std\+::string \&client\+Name)=0\hypertarget{class_midi_api_ab323e8b2789ce47ad0985d136ad6851d}{}\label{class_midi_api_ab323e8b2789ce47ad0985d136ad6851d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ {\bfseries api\+Data\+\_\+}\hypertarget{class_midi_api_a5708c9051060b961ee1b69d053314dcd}{}\label{class_midi_api_a5708c9051060b961ee1b69d053314dcd}
+
+\item 
+bool {\bfseries connected\+\_\+}\hypertarget{class_midi_api_a2caa246b04594b5ae84bacccb2a648aa}{}\label{class_midi_api_a2caa246b04594b5ae84bacccb2a648aa}
+
+\item 
+std\+::string {\bfseries error\+String\+\_\+}\hypertarget{class_midi_api_a6bff6ace3f6e863be6cde261a6f2f114}{}\label{class_midi_api_a6bff6ace3f6e863be6cde261a6f2f114}
+
+\item 
+\hyperlink{_rt_midi_8h_a57641d3490f722c3efb9ee1c640e36bb}{Rt\+Midi\+Error\+Callback} {\bfseries error\+Callback\+\_\+}\hypertarget{class_midi_api_a4f9fbf86cd9a970ff6e7211d73d6594d}{}\label{class_midi_api_a4f9fbf86cd9a970ff6e7211d73d6594d}
+
+\item 
+bool {\bfseries first\+Error\+Occurred\+\_\+}\hypertarget{class_midi_api_a4d2ee5d79440913ab6b64d38b402c408}{}\label{class_midi_api_a4d2ee5d79440913ab6b64d38b402c408}
+
+\item 
+void $\ast$ {\bfseries error\+Callback\+User\+Data\+\_\+}\hypertarget{class_midi_api_a25be898d4cfd92d8221d5b2aeaffe051}{}\label{class_midi_api_a25be898d4cfd92d8221d5b2aeaffe051}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/rtmidi/\hyperlink{_rt_midi_8h}{Rt\+Midi.\+h}\item 
+include/rtmidi/Rt\+Midi.\+cpp\end{DoxyCompactItemize}
